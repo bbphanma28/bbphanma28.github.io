@@ -76,40 +76,31 @@
                           placeholder="Public (req'd)"
                   >
               </td>
-            <span id="name_text"><</td>
             </tr>
-    <tr  class="form">
-        <td align="right">
-            <label for="addr1" >Address Line 1</label>
-        </td>
-        <td>
-            <input type="text" 
-                    size="20" 
-                    minlength="4"
-                    maxlength="30" 
-                    id="addr1" 
-                    name="addr1" 
-                    required
-                    oninvalid="this.setCustomValidity('At least 1 address line Required')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="1234 Main St (req'd)"
-            >
-        <span id="addr1_text"></td>
-    </tr>
-    <tr  class="form">
-        <td align="right">
-            <label for="addr2">Address Line 2</label>
-        </td>
-        <td>
-            <input type="text" 
-                    size="20" 
-                    maxlength="30" 
-                    id="addr1" 
-                    name="addr1" 
-                    placeholder="Apt #, etc..."
-            >
-            <span id="addr2_text">
-        </td>
+            <tr  class="form">
+              <td align="right">
+                <label for="addr1" >Address Line 1</label>
+                  <input type="text" 
+                          size="20" 
+                          minlength="4"
+                          maxlength="30" 
+                          id="addr1" 
+                          name="addr1" 
+                          required
+                          oninvalid="this.setCustomValidity('At least 1 address line Required')"
+                          oninput="this.setCustomValidity('')"
+                          placeholder="1234 Main St (req'd)"
+                  >
+                  <label for="addr2">Address Line 2</label>
+                  <input type="text" 
+                          size="20" 
+                          maxlength="30" 
+                          id="addr1" 
+                          name="addr1" 
+                          placeholder="Apt #, etc..."
+                  >
+              </td>
+            </tr>
     <tr class="form">
         <td align="right">
             <label for="city">City,</label>
