@@ -40,43 +40,44 @@
               <tr class="form">
                 <th class="form" colspan="3">Set up a new account</th>
               </tr>
-          <tr class="form">
-        <td>
-            <label for="firstname">First NAME</label>
-                <input type="text"
-                    size="25"
-                    maxlength="30" 
-                    id="firstname" 
-                    name="firsttname" 
-                    required
-                    oninput="this.setCustomValidity('')"
-                    placeholder="(req'd)" >
-            <label for="middleinit">MI</label>
-            <label for="lastname">Last</label>
-        </td>
-        <td>
-
-            >
-            
-            <input type="text" 
-                    size="1"
-                    maxlength="1" 
-                    id="middleinit" 
-                    name="middleinit" 
-                    placeholder="Q"
-            >
-            <input type="text"
-                    size="20"
-                    maxlength="30" 
-                    id="lastname" 
-                    name="lastname" 
-                    required
-                    oninvalid="this.setCustomValidity('Last Name is Required')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="Public (req'd)"
-            >
-        <span id="name_text"><</td>
-    </tr>
+            <tr class="form">
+              <td>
+                <label for="firstname">First Name</label>
+                  <input type="text"
+                      size="25"
+                      maxlength="30" 
+                      id="firstname" 
+                      name="firstname" 
+                      required
+                      oninput="this.setCustomValidity('')"
+                      placeholder="(req'd)" 
+                  >
+              </td>
+              <td>
+                <label for="middleinit">MI</label>
+                  <input type="text" 
+                          size="1"
+                          maxlength="1" 
+                          id="middleinit" 
+                          name="middleinit" 
+                          placeholder="Q"
+                  >
+              </td>
+              <td>
+                <label for="lastname">Last Name</label>
+                  <input type="text"
+                          size="20"
+                          maxlength="30" 
+                          id="lastname" 
+                          name="lastname" 
+                          required
+                          oninvalid="this.setCustomValidity('Last Name is Required')"
+                          oninput="this.setCustomValidity('')"
+                          placeholder="Public (req'd)"
+                  >
+              </td>
+            <span id="name_text"><</td>
+            </tr>
     <tr  class="form">
         <td align="right">
             <label for="addr1" >Address Line 1</label>
