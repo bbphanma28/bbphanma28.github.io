@@ -16,9 +16,73 @@
   
   <!-- Start of Body -->
     <body>
+      
       <!-- Header -->
       <div id = "header">
-        <img id="logo" src="BB28medicalLogo.png">
+        <table width = 100%>
+          <tr>
+            <td>
+              <td valign="bottom" align="right">Today's date: <span id="today">Date goes here </span></td>
+              <img id="logo" src="BB28medicalLogo.png">
+              <h1>BB28 Medical</h1>
+            </td>
+          </tr>
+        </table>
       </div>
+        
+        <!-- Form Start -->
+        <div class="form">
+        <form action="homework1-thanks.html">
+          <table class="form">
+            <tr>
+              <th class="form">Set Up a New Account</th>
+            </tr>
+
+          <!-- Enter Name -->
+          <tr class="form">
+            <td>
+              <label for="fname">First Name</label>
+              <input type="text" id="firstname" name="fname">
+  
+              <label for="middleinitial">Middle Initial</label>
+              <input type="text" id="middleinit" name="middleinit">
+  
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lname" name="lastname">
+            </td>
+          </tr>
+  
+          <!-- Enter DOB, SSN, and Email -->
+          <tr class="form">
+            <td>
+              
+            </td>
+          </tr>
+  
+          <!-- Enter City, State, and ZIP -->
+          <tr class="form">
+            <td>
+              
+            </td>
+          </tr>
+
+          <!-- Enter Address 1 and optional Address 2 -->
+          <tr class="form">
+            <td>
+              
+            </td>
+          </tr>
+
+          <!-- Checkboxes, Gender, Marital Status -->
+
+          <!-- Slide for  from 1-10 wellness -->
+
+            
+        </table> <!-- End of First form table which excludes username and password -->
+      </div> <!-- End of div of first form excluding username and pass -->
+      
+     <script>
+    document.getElementById("today").innerHTML = new Date().toLocaleDateString();
+    </script>
     </body>
 </html>
