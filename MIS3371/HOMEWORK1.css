@@ -3,6 +3,8 @@ body {
 }
 
 .form {
-  margin: auto;
-  padding: 20px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
 }
