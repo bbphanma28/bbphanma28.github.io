@@ -8,36 +8,6 @@ body {
   margin: auto;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input, select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input[type="number"] {
-  width: 200px; /* specify width for the SSN input */
-}
-
-input[type="date"] {
-  width: 220px; /* specify width for the date input */
-}
-
-select {
-  width: 100%; /* full width for the select dropdown */
-  padding: 10px;
-}
-
 .table {
   width: 100%;
   border-collapse: collapse;
