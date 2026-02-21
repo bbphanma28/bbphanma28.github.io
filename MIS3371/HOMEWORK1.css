@@ -4,5 +4,8 @@ body {
 
 .form {
   margin: auto;
+}
+
+tr {
   padding: 20px;
 }
