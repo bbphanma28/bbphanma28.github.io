@@ -22,5 +22,9 @@ label {
 
 td {
 	padding: 30px;
+}
+
+td.today {
+	padding: 30px;
     text-align: left;
 }
