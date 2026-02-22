@@ -2,11 +2,13 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-th.formheader {
-	border: 5px solid black;
+table.formheader {
 	padding: 20px;
-	width: 70%;
-	margin: 0px auto;
+	border:5px solid red;
+}
+
+th.formheader {
+	color: red;
 }
 
 label {
@@ -15,8 +17,6 @@ label {
 }
 
 .form-container {
-	display: flex;
-	justify-content: center;
 	margin: 0px auto;
 	background-color: pink;
 	padding: 10px;
