@@ -3,12 +3,14 @@ body {
 }
 
 th.formheader {
-	border: 5px solid red;
+	border: 5px solid black;
 	width: 70%;
 }
 
 table {
 	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 label {
