@@ -1,23 +1,22 @@
 body {
-  font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
 }
 
 .form-container {
+	justify-content: center;
 	background-color: pink;
 	padding: 20px;
 	border-radius: 10px; 
-	margin: 20px auto;
-	width: 60%;
-}
-
-.form {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30%;
-	background-color: pink;
+	margin: 20px;
+	width: 70%;
 }
 
 td {
 	padding: 25px;
+    text-align: left;
 }
