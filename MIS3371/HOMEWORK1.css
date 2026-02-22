@@ -5,6 +5,7 @@ body {
 th.formheader {
 	border: 10px solid black;
 	font-color: red;
+	width: 70%;
 }
 
 table {
