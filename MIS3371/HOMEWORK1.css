@@ -3,7 +3,7 @@ body {
 }
 
 th.formheader {
-	border: 5px solid black;
+	border: 5px solid red;
 	padding: 20px;
 	width: 70%;
 }
