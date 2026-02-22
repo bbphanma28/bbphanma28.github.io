@@ -2,7 +2,10 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-table.form {
+.formheader {
+	font-size: 150px;
+}
+table {
 	width: 100%;
 }
 
@@ -22,9 +25,4 @@ label {
 
 td {
 	padding: 30px;
-}
-
-td.today {
-	padding: 30px;
-    text-align: right;
 }
