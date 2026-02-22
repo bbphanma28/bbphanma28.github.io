@@ -3,9 +3,10 @@ body {
 }
 
 th.formheader {
-	border: 5px solid red;
+	border: 5px solid black;
 	padding: 20px;
 	width: 70%;
+	margin: 0px auto;
 }
 
 label {
