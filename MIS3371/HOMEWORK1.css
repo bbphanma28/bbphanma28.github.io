@@ -3,10 +3,15 @@ body {
 }
 
 table.formheader {
+	width: 70%;
 	border: 10px solid black;
 	text-align: center;
-	font-size: 200px;
 }
+
+th.formheader {
+	font-color: red;
+}
+
 table {
 	width: 100%;
 }
