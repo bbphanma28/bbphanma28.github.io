@@ -3,8 +3,9 @@ body {
 }
 
 table.formheader {
-	font-size: 70%;
+	border: 10px solid black;
 	text-align: center;
+	font-size: 200px;
 }
 table {
 	width: 100%;
