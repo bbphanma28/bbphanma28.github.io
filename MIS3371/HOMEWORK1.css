@@ -2,7 +2,7 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-.formheader {
+table.formheader {
 	font-size: 150px;
 }
 table {
