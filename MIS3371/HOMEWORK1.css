@@ -70,7 +70,7 @@ input[type=number] {
 input[type=text]#city {
 	padding: 12px;
 	box-sizing: border-box;
-    width: 90%;
+    width: 100%;
 }
 
 input select {
