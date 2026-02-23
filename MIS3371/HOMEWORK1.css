@@ -45,7 +45,6 @@ input[type=text]#lname, #fname {
 
 input[type=text]#middleinit {
 	padding: 12px;
-	width: 30%;
-	margin-right: 200px;
 	box-sizing: border-box;
+    width: 20%;
 }
