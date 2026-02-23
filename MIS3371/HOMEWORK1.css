@@ -66,3 +66,16 @@ input[type=number] {
 	box-sizing: border-box;
     width: 100%;
 }
+
+input[type=text]#city {
+	padding: 12px;
+	box-sizing: border-box;
+    width: 90%;
+}
+
+input select {
+	padding: 12px;
+    margin-left: 10px;
+	box-sizing: border-box;
+    width: 30%;
+}
