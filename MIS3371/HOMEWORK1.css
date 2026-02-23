@@ -47,25 +47,18 @@ input[type=text]  {
 input[type=text]#middleinit {
 	padding: 12px;
 	box-sizing: border-box;
-    width: 20%;
+    width: 30%;
 }
 
 input[type=date] {
 	padding: 12px;
 	box-sizing: border-box;
-    width: 100%;
+    width: 110%;
 }
 
 input[type=number] {
 	padding: 12px;
-    margin-right: 0;
+    margin-left: 10px;
 	box-sizing: border-box;
     width: 100%;
-}
-
-input[type=text]#email {
-	padding: 12px;
-	box-sizing: border-box;
-    width: 100%;
-    margin-right: 0;
 }
