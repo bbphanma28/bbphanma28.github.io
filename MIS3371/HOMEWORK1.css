@@ -3,16 +3,16 @@ body {
 }
 
 table {
-	width: 100%;
+  width: 100%;
 }
 
 td {
-	padding: 30%;
+	padding: 0 10px;
 }
 
 table.formheader {
 	padding: 20px;
-	border:5px solid red;
+	border:5px solid pink;
 	margin: 10px auto;
 	width: 70%;
 	border-radius: 10px;
@@ -33,20 +33,11 @@ label {
 	background-color: pink;
 	padding: 20px; 
 	border-radius: 10px; 
-	width: 80%;
 }
 
-input[type=text], input[type=date], input[type=number], select {
-	padding: 12px;
-	width: 90%;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-/* input[type=text]#lname, #fname, #middleinit {
-	display
+input[type=text]#lname, #fname, #middleinit {
 	padding: 12px;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-right: 200px;
 	box-sizing: border-box;
-} */
-
+}
