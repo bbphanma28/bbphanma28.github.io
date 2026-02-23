@@ -3,7 +3,7 @@ body {
 }
 
 table {
-  width: 100%;
+  width: 80%;
 }
 
 td {
@@ -12,7 +12,7 @@ td {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid pink;
+	border:5px solid red;
 	margin: 10px auto;
 	width: 70%;
 	border-radius: 10px;
