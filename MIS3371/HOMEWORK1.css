@@ -4,7 +4,7 @@ body {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid black;
+	border:5px solid red;
 	margin: 10px auto;
 	width: 70%;
 }
@@ -13,10 +13,9 @@ th.formheader {
 	color: red;
 }
 
-/*label {
+label {
 	display: block;
-	margin-bottom: 10px;
-} */
+}
 
 .form-container {
 	display: flex;
@@ -26,6 +25,13 @@ th.formheader {
 	padding: 10px;
 	border-radius: 10px; 
 	width: 70%;
+}
+
+input[type=text]#lname, #fname, select {
+	width: 50%;
+	padding: 12px;
+	margin: 8px auto;
+	box-sizing: border-box;
 }
 
 td {
