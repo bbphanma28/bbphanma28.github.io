@@ -7,7 +7,7 @@ table {
 }
 
 td {
-	padding: 0 10px;
+	padding: 10px;
 }
 
 table.formheader {
@@ -26,19 +26,20 @@ label {
 	display: block;
 }
 
+
 .form-container {
 	display: flex;
 	justify-content: center;
 	margin: 0px auto;
 	background-color: pink;
-	padding: 20px; 
+	padding: 10px; 
 	border-radius: 10px; 
 	width: 80%
 }
 
-input[type=text]#lname, #fname {
+input[type=text]#lname, #fname  {
 	padding: 12px;
-	width: 70%;
+	width: 100%;
 	margin-right: 200px;
 	box-sizing: border-box;
 }
@@ -47,4 +48,24 @@ input[type=text]#middleinit {
 	padding: 12px;
 	box-sizing: border-box;
     width: 20%;
+}
+
+input[type=date] {
+	padding: 12px;
+	box-sizing: border-box;
+    width: 80%;
+}
+
+input[type=number] {
+	padding: 12px;
+    margin-right: 0;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+input[type=text]#email {
+	padding: 12px;
+	box-sizing: border-box;
+    width: 100%;
+    margin-right: 0;
 }
