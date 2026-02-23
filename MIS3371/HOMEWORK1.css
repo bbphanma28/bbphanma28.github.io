@@ -37,7 +37,7 @@ label {
 	width: 80%
 }
 
-input[type=text]#lname, #fname  {
+input[type=text]  {
 	padding: 12px;
 	width: 100%;
 	margin-right: 200px;
@@ -53,7 +53,7 @@ input[type=text]#middleinit {
 input[type=date] {
 	padding: 12px;
 	box-sizing: border-box;
-    width: 80%;
+    width: 100%;
 }
 
 input[type=number] {
