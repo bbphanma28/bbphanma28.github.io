@@ -4,9 +4,10 @@ body {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid red;
+	border:5px solid pink;
 	margin: 10px auto;
 	width: 70%;
+	border-radius: 10px;
 }
 
 th.formheader {
@@ -22,18 +23,18 @@ label {
 	justify-content: center;
 	margin: 0px auto;
 	background-color: pink;
-	padding: 10px;
+/*	padding: 10px; */
 	border-radius: 10px; 
 	width: 70%;
 }
 
 input[type=text]#lname, #fname, select {
-	width: 50%;
+	width: 80%;
 	padding: 12px;
 	margin: 8px auto;
 	box-sizing: border-box;
 }
 
-td {
+ td {
 	padding: 10px;
-}
+} 
