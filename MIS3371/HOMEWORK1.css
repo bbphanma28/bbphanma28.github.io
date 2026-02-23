@@ -4,7 +4,7 @@ body {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid red;
+	border:5px solid black;
 	margin: 10px auto;
 	width: 70%;
 }
@@ -13,10 +13,10 @@ th.formheader {
 	color: red;
 }
 
-label {
+/*label {
 	display: block;
 	margin-bottom: 10px;
-}
+} */
 
 .form-container {
 	display: flex;
@@ -29,5 +29,5 @@ label {
 }
 
 td {
-	padding: 30px;
+	padding: 10px;
 }
