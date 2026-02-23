@@ -3,7 +3,7 @@ body {
 }
 
 table {
-  width: 80%;
+  width: 100%;
 }
 
 td {
@@ -12,7 +12,7 @@ td {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid red;
+	border:5px solid pink;
 	margin: 10px auto;
 	width: 70%;
 	border-radius: 10px;
@@ -33,6 +33,7 @@ label {
 	background-color: pink;
 	padding: 20px; 
 	border-radius: 10px; 
+	width: 80%
 }
 
 input[type=text]#lname, #fname, #middleinit {
