@@ -12,7 +12,7 @@ td {
 
 table.formheader {
 	padding: 20px;
-	border:5px solid red;
+	border:5px solid pink;
 	margin: 10px auto;
 	width: 70%;
 	border-radius: 10px;
@@ -51,7 +51,7 @@ input[type=text], select  {
 
 #fname, #lname {
 	padding: 12px;
-    margin-right: 200px;
+    margin-right: 250px;
 	box-sizing: border-box;
     width: 100%;
 }
