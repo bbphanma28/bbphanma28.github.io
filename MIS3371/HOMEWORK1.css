@@ -55,15 +55,8 @@ input[type=text]#middleinit {
     width: 30%;
 }
 
-input[type=date] {
+input[type=date], [type=number], [type=text]#city, select {
 	padding: 12px;
-	box-sizing: border-box;
-    width: 110%;
-}
-
-input[type=number] {
-	padding: 12px;
-    margin: 5px;;
 	box-sizing: border-box;
     width: 100%;
 }
@@ -72,17 +65,5 @@ input[type=text]#email {
 	padding: 12px;
 	box-sizing: border-box;
     margin-right: 100px;
-    width: 100%;
-}
-
-input[type=text]#city {
-	padding: 12px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-input select {
-	padding: 12px;
-	box-sizing: border-box;
     width: 100%;
 }
