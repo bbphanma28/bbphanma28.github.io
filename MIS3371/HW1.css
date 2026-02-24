@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	background-color: blue;
+	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
 	width: 60%
@@ -28,8 +28,38 @@
 	border-radius: 10px;
 	max-width: 100%;
 }
+	border-radius: 10px; 
+	width: 60%
+}
 
- input[type="text"],  input[type="date"], input[type="number"], select {
+input, select {
+	border-radius: 10px;
+	font-size: 100%;
+	padding: 12px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#fname, #lname {
+	padding: 12px;
+    margin-right: 250px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+#birthday, #SSN, #city, #middleinit, #state {
+	padding: 12px;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+#email {
+	padding: 12px;
+	box-sizing: border-box;
+    margin-right: 100px;
+    width: 100%;
+}
+ /* input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
@@ -55,4 +85,4 @@ select, #zip, #email {
 #address1, #address2 {
     width: 260%;
     box-sizing: border-box;
-}
+} */
