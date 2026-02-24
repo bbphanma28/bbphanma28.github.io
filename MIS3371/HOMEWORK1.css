@@ -33,7 +33,7 @@ label {
 	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
-	width: 70%
+	width: 60%
 }
 
 input, select {
@@ -43,7 +43,7 @@ input, select {
 input[type=text], select  {
 	padding: 12px;
 	width: 100%;
-	margin-right: 200px;
+	margin: 0px auto;
 	box-sizing: border-box;
 }
 
