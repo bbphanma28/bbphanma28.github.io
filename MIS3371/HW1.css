@@ -1,14 +1,14 @@
 .form-container {
-	display: flex;
-	justify-content: center;
+	/*display: flex;
+	justify-content: center;*/
 	margin: 0px auto;
-	background-color: pink;
+	background-color: red;
 	padding: 10px; 
 	border-radius: 10px; 
 	width: 60%
 }
  
- td {
+td {
 	padding: 10px;
 }
 
@@ -21,7 +21,7 @@
     max-width: 100%;
 }
 
- input[type="text"],  input[type="date"], input[type="number"], select {
+input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
