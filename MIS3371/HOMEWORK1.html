@@ -159,9 +159,10 @@
                 </td>
               </tr>
           </table>
+        <!-- Checkboxes, Radio, and Slider -->
           <table class="languages">
-            <tr><br>
-            <th>What is your preferred language(s)?</th>
+            <tr>
+            <th colspan="3">What is your preferred language(s)?</th>
             </tr>
             <tr>
               <td>
@@ -169,15 +170,82 @@
                 <label for="language1">English</label>
               </td>
               <td>
-                <input type="checkbox" name="spanish" value="Spanish">
-                <label for="language2">Spanish</label>
+                <input type="checkbox" name="english" value="English">                
+                <label for="language1">English</label>
               </td>
               <td>
-                <input type="checkbox" name="chinese" value="Chinese">
-                <label for="language3">Chinese</label>
+                <input type="checkbox" name="english" value="English">               
+                <label for="language1">English</label>
+              <td>
+                <input type="checkbox" name="english" value="English">                
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="checkbox" name="english" value="English">               
+                <label for="language1">English</label>
               </td>
             </tr>
           </table>
+          <table class="languages">
+            <th colspan ="3">What is your preferred language(s)?</th>
+            <tr>
+              <td>
+                <input type="radio" name="english" value="English">                
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="radio" name="english" value="English">                
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="radio" name="english" value="English">
+                <label for="language1">English</label>
+              <td>
+                <input type="radio" name="english" value="English">                
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="radio" name="english" value="English">              
+                <label for="language1">English</label>
+              </td>
+            </tr>
+          </table>
+          <table class="languages">
+            <th colspan ="3">What is your preferred language(s)?</th>
+              <tr>
+                <td>
+                  <label for="slider"></label>
+                  <input type="range" name="english" value="English">
+                </td>
+              </tr>
+            </table>
+            <!-- Comment Box -->
+            <table>
+              <th colspan="3"> Any concerns</th>
+                <td>
+                  <label for="comments"></label>
+                  <input type="text" id="comment" name="comment">
+                <td>
+          </table>
+          <!-- Create User Account -->
+          <table>
+            <th colspan="3">Create Username and Password</th><br>
+              <tr>
+                <td>
+                  <label for="user">Username</label>
+                  <input type="text" id="user" name="user">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pass">Password</label>
+                  <input for="password" id="pass" name="pass">
+                </td>
+              </tr>
+          </table>  
+        <!-- Reset and Submit Button -->
+        <input type="submit">
+        <input type="reset">
 
     </form>
      <script>
