@@ -1,8 +1,12 @@
+table {
+  width: 100%;
+}
+
 .form-container {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	background-color: pink;
+	background-color: blue;
 	padding: 10px; 
 	border-radius: 10px; 
 	width: 60%
