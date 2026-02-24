@@ -23,11 +23,11 @@ th.formheader {
 }
 
 .patient-header {
-	padding: 20px;
+	padding: 10px;
     text-align: center;
-	background-color: red;
+	background-color: white;
 	margin: 10px auto;
-	width: 90%;
+	width: 100%;
 	border-radius: 10px;
 }
 
