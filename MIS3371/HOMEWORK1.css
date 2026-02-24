@@ -38,6 +38,7 @@ label {
 
 input, select {
 	border-radius: 10px;
+	font-size: 100%;
 }
 
 input[type=text], select  {
