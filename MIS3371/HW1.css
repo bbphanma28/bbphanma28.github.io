@@ -5,7 +5,7 @@
 	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
-	width: 70%
+	width: 60%
 }
  
  td {
@@ -15,18 +15,18 @@
 .patient-header {
 	padding: 15px;
     text-align: center;
-	background-color: red;
+	background-color: white;
     margin: 0 auto;
 	border-radius: 10px;
     max-width: 100%;
 }
 
 .text-boxes {
-background-color: blue;
-margin-top: 10px;
-margin-bottom: 10px;
-border-radius: 10px;
-max-width: 100%;
+	background-color: blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	max-width: 100%;
 }
 
  input[type="text"],  input[type="date"], input[type="number"], select {
@@ -39,16 +39,20 @@ max-width: 100%;
 
 #fname, #lname {
     margin-right: 300px;
+	width: 100%;
 }
 
 #city {
 	margin-right: 200px;
+	width: 100%;
 }
 
 select, #zip, #email {
 	margin-right: 100px;
+	width: 100%;
 }
 
 #address1, #address2 {
 	margin-right: 600px;
+	width: 100%;
 }
