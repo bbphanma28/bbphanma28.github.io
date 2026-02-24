@@ -25,9 +25,10 @@ th.formheader {
 .patient-header {
 	padding: 15px;
     text-align: center;
-	background-color: white;
+	background-color: red;
     margin: 0 auto;
 	border-radius: 10px;
+	width: 100%;
     max-width: 750px;
 }
 
