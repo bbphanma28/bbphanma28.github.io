@@ -1,8 +1,8 @@
 .form-container {
-	/*display: flex;
-	justify-content: center;*/
+	display: flex;
+	justify-content: center;
 	margin: 0px auto;
-	background-color: red;
+	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
 	width: 60%
