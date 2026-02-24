@@ -60,7 +60,7 @@ input, select {
     width: 100%;
 }
 
-#birthday, #SSN, #city, #middleinit, select {
+#birthday, #SSN, #city, #middleinit, #state {
 	padding: 12px;
 	box-sizing: border-box;
     width: 100%;
