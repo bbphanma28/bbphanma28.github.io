@@ -22,7 +22,7 @@
 }
 
 .text-boxes {
-	background-color: blue;
+	background-color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 10px;
@@ -53,6 +53,6 @@ select, #zip, #email {
 }
 
 #address1, #address2 {
-	margin-right: 600px;
-	width: 100%;
+    width: 260%;
+    margin: 0 auto;
 }
