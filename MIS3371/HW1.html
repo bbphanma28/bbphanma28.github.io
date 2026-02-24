@@ -1,122 +1,80 @@
 <!DOCTYPE HTML>
-<!--
-  Program name: HW1
-  Author: Breanna Phanmaha
-  Date created: 02-09-2026
-  Date last edited: The date you submitted it
-  Version: 1.0
-  Description: Medical Form HTML 
--->
-<html> 
-    <head>
-
-        <title>BB28 Medical</title>
-      
-        <link rel="stylesheet" href="HW1.css">
-      
-    </head>
-
-  <!--Start of Body-->
+<!-- Without CSS -->
+<html>
+  <head>
+    <title>BB28 Medical Form</title>
+  </head>
+ 
+  <!-- Start of Body -->
     <body>
-        <div id="header"> 
-            <table width="100%">
-                <tr>
-                    <td>
-                        <img 
-                            id="logo" 
-                            src="BB28medicalLogo.png" 
-                            alt="BB28 Medical Logo"
-                        >
-                    </td>
-                    <td valign="top">BB28 Medical</td>
-                    <td valign="bottom" align="right">Today's date: <span id="today">Date goes here </span></td>
-                </tr>
-            </table>
+      
+      <!-- Header -->
+      <div id="header">
+        <table width = 100%>
+          <tr>
+            <td valign="top">BB28 Medical</td>
+            <td valign="bottom" align="right">Today's date: <span id="today">Date goes here </span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Form Header -->
+        <div>
+          <table class="formheader">
+            <tr>
+              <th class="formheader">Patient Registration Form</th>
+            </tr>
+          </table>
         </div>
-        <hr>
-        <div id="body">
-<form action="homework1-thanks.html"> <!-- what is this. wait i think this is where the page goes after i enter the user input -->
-           <table class="form">
-              <tr class="form">
-                <th class="form" colspan="3">Set up a new account</th>
+        
+        <!-- Form Start -->
+      <div class="form-container">
+        <form action="homework1-thanks.html">
+          <div class="patient-header">Patient Information</div>
+          <!-- Enter Name -->
+            <table>
+              <tr>
+                <td>
+                  <label for="firstname">First Name</label>
+                  <input type="text" id="fname" name="firstname">
+                </td>
+                <td>
+                  <label for="lastname">Last Name</label>
+                  <input type="text" id="lname" name="lastname">
+                </td>
+                <td>
+                  <label for="middleinitial">Middle Initial</label>
+                  <input type="text" id="middleinit" name="middleinit">
+                </td>
               </tr>
-             <!-- Name -->
-            <tr class="form">
+          </table>
+          <!-- Enter DOB, SSN, and Email -->
+          <table>
+             <tr>
+                <td>
+                  <label for= "birthday">DOB</label>
+                  <input type="date" id="birthday" name="birthday">
+                </td>
+                <td>
+                  <label for="SSN">SSN</label>
+                  <input type="number" id="SSN" name="SSN" size="9" maxlength="9">
+                </td>
+                <td>
+                  <label for="email">Email Address</label>
+                  <input type="text" id="email" name="email">
+                </td>
+              </tr>
+          </table>
+          <!-- Enter City, State, and ZIP -->
+          <table>
+            <tr>
               <td>
-                <label for="firstname">First Name</label>
-                  <input type="text"
-                      maxlength="30" 
-                      id="firstname" 
-                      name="firstname" 
-                      required
-                      oninput="this.setCustomValidity('')"
-                      placeholder="(req'd)" 
-                  >
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
               </td>
               <td>
-                <label for="middleinit">MI</label>
-                  <input type="text" 
-                          size="1"
-                          maxlength="1" 
-                          id="middleinit" 
-                          name="middleinit" 
-                          placeholder="Q"
-                  >
-              </td>
-              <td>
-                <label for="lastname">Last Name</label>
-                  <input type="text"
-                          maxlength="30" 
-                          id="lastname" 
-                          name="lastname" 
-                          required
-                          oninvalid="this.setCustomValidity('Last Name is Required')"
-                          oninput="this.setCustomValidity('')"
-                          placeholder="Public (req'd)"
-                  >
-              </td>
-            </tr>
-             <!-- Address -->
-            <tr class="form">
-              <td align="right">
-                <label for="addr1" >Address Line 1</label>
-                  <input type="text" 
-                          minlength="4"
-                          maxlength="30" 
-                          id="addr1" 
-                          name="addr1" 
-                          required
-                          oninvalid="this.setCustomValidity('At least 1 address line Required')"
-                          oninput="this.setCustomValidity('')"
-                          placeholder="1234 Main St (req'd)"
-                  >
-                  <label for="addr2">Address Line 2</label>
-                  <input type="text" 
-                          maxlength="30" 
-                          id="addr1" 
-                          name="addr1" 
-                          placeholder="Apt #, etc..."
-                  >
-              </td>
-            </tr>
-    <tr class="form">
-        <td align="right">
-            <label for="city">City,</label>
-            <label for="state">ST</label>
-            <label for="zip">Zip</label>
-        </td>
-        <td>
-            <input type="text" 
-                    size="10" 
-                    maxlength="25" 
-                    id="city" 
-                    name="city" 
-                    required
-                    oninvalid="this.setCustomValidity('You forgot City')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="Anytown (req'd)"
-            >
-            <select required>
+                <label for="state">State</label>
+                <select required>
                 <option value=""></option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -170,58 +128,58 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <input type="text" 
-                    pattern="[0-9]{5}"
-                    size="5"
-                    maxlength="5" 
-                    id="zip" 
-                    name="zip" 
-                    required
-                    oninvalid="this.setCustomValidity('5 Digit Zip/Postal Code required')"
-                    oninput="this.setCustomValidity('')"
-                    placeholder="00000"
-            >
-            <span id="City_text"><span id="State_text"> 
-        </td>
-    </tr>
-    <tr class="form">
-        <td align="right">
-            <label for="phone">Phone #</label>
-        </td>
-        <td>
-            <input type="text" 
-                    size="13" 
-                    maxlength="13" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="(713)555-1212"
-            >
-            <span id="phone_text">  
-        </td>
-    </tr class="form">
-    <tr>        
-        <td colspan="3">
-            <center>
-            <input type="submit">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="reset">
-            </center>
-        </td>
-    <tr>
-    </tr>
+              </td>
+              <td>
+                <label for="zip">Zip Code</label>
+                <input type="text"  pattern="[0-9]{5}" size="5" maxlength="5" id="zip" name="zip" required>
+              </td>
+            </tr>
+          </table>
+          <table>
+              <tr>
+                <td>
+                  <label for="address1">Address 1</label>
+                  <input type="text" id="address1" name="address1">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="address2">Address 2</label>
+                  <input type="text" id="address2" name="address2">
+                </td>
+              </tr>
+          </table>
+        <table class="languages">
+            <tr>
+            <th colspan="3">What is your preferred language(s)?</th>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="english" value="English">
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="checkbox" name="english" value="English">
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="checkbox" name="english" value="English">
+                <label for="language1">English</label>
+                <td>
+                <input type="checkbox" name="english" value="English">
+                <label for="language1">English</label>
+              </td>
+              <td>
+                <input type="checkbox" name="english" value="English">
+                <label for="language1">English</label>
+              </td>
+            </tr>
+          </table>
 
-   </table
-</form> 
-        </div>
-        <div id="footer"
-            <hr>
-            Here is a footer... BYE!
-        </div>
-        <!-- Load external JavaScript -->
-        <script src="homework1.js"></script>
-        
- <script>
+
+    </form>
+     <script>
     document.getElementById("today").innerHTML = new Date().toLocaleDateString();
-</script>
-</body>
+    </script>
+    </body>
 </html>
