@@ -1,14 +1,14 @@
 .form-container {
 	display: flex;
 	justify-content: center;
-	margin: 0px auto;
+	margin: 0 auto;
 	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
-	width: 60%
+	width: 70%
 }
  
-td {
+ td {
 	padding: 10px;
 }
 
@@ -21,7 +21,16 @@ td {
     max-width: 100%;
 }
 
-input[type="text"],  input[type="date"], input[type="number"], select {
+.text-boxes {
+background-color: blue;
+padding: 5px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 10px;
+max-width: 100%;
+}
+
+ input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
@@ -30,17 +39,17 @@ input[type="text"],  input[type="date"], input[type="number"], select {
 }
 
 #fname, #lname {
-    min-width: 300px;
+    margin-right: 300px;
 }
 
-#email {
-    min-width: 300px;
+#city {
+	margin-right: 200px;
 }
 
-#zip {
-    min-width: 200px;
+select, #zip, #email {
+	margin-right: 100px;
 }
 
 #address1, #address2 {
-    min-width: 700px;
+	margin-right: 600px;
 }
