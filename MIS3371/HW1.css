@@ -30,17 +30,17 @@
 }
 
 #fname, #lname {
-    margin-right: 300px;
+    min-width: 300px;
 }
 
 #email {
-    margin-right: 100px;
+    min-width: 300px;
 }
 
 #zip {
-    margin-right: 200px;
+    min-width: 200px;
 }
 
 #address1, #address2 {
-    margin-right: 500px;
+    min-width: 700px;
 }
