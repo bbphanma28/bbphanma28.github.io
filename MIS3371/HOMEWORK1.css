@@ -1,51 +1,61 @@
-body {
-	font-family: Arial, sans-serif;
+.form-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	background-color: pink;
+	padding: 20px; 
+	border-radius: 10px; 
+	width: 55%
 }
 
 table {
   width: 100%;
 }
-
-td {
+ 
+ td {
 	padding: 10px;
 }
 
-table.formheader {
-	padding: 20px;
-	border:5px solid blue;
-	margin: 10px auto;
-	width: 70%;
-	border-radius: 10px;
-}
-
-th.formheader {
-	color: red;
-}
-
 .patient-header {
-	padding: 15px;
+	padding: 20px;
     text-align: center;
 	background-color: red;
+    border: 4px solid white;
     margin: 0 auto;
 	border-radius: 10px;
     max-width: 100%;
+    margin-bottom: 10px;
 }
 
-label {
-	display: block;
+.section1-container {
+	background-color: deeppink;
+    border: 4px solid white;
+	padding: 10px;
+	border-radius: 10px;
+	max-width: 100%;
+    margin-bottom: 20px;
 }
 
-.form-container {
-	display: flex;
-	justify-content: center;
-	margin: 0px auto;
-	background-color: pink;
-	padding: 10px; 
-	border-radius: 10px; 
-	width: 60%
+.section2-container {
+	background-color: deeppink;
+    border: 4px solid white;
+	border-radius: 10px;
+	max-width: 100%;
+	padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-input, select {
+.s2-question {
+	font-weight: bold;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	margin: 10px;
+}
+
+input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
@@ -54,25 +64,24 @@ input, select {
 }
 
 #fname, #lname {
-	padding: 12px;
-    margin-right: 250px;
-	box-sizing: border-box;
-    width: 100%;
+    margin-right: 200px;
 }
 
-#birthday, #SSN, #city, #middleinit, #state {
-	padding: 12px;
-	box-sizing: border-box;
-    width: 100%;
+#city {
+	margin-right: 200px;
 }
 
-#email {
-	padding: 12px;
-	box-sizing: border-box;
-    margin-right: 100px;
-    width: 100%;
+select, #zip, #email {
+	margin-right: 100px;
 }
 
-.languages {
-	display: inline-block;
+#address1, #address2 {
+	margin-right: 600px;
+}
+
+input[type="range"] {
+	display: flex;
+	justify-content: center;
+    margin: 0 auto;
+    width: 400px;
 }
