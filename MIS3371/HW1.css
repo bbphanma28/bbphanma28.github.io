@@ -9,7 +9,7 @@ table {
 	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
-	width: 60%
+	width: 50%
 }
  
  td {
@@ -26,7 +26,7 @@ table {
 }
 
 .text-boxes {
-	background-color: white;
+	background-color: deeppink;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 10px;
@@ -34,7 +34,7 @@ table {
 }
 
 .second-part {
-	background-color: white;
+	background-color: deeppink;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 10px;
