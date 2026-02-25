@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!-- Without CSS -->
 <html>
   <head>
     <title>BB28 Medical Form</title>
@@ -8,7 +7,6 @@
  
     <!-- Start of Body -->
     <body>
-      
       <!-- Header -->
       <div id="header">
         <table width = 100%>
@@ -33,7 +31,7 @@
         <form action="homework1-thanks.html">
           <div class="patient-header">Patient Information</div>
           <!-- Enter Name -->
-          <div class="text-boxes">
+          <div class="section1-container">
             <table>
               <tr>
                 <td>
@@ -154,8 +152,8 @@
           </table>
           </div>
           <!-- Checkboxes, Radio, and Slider -->
-          <div class="second-part">
-            <div class="s2-questiontitle">What is your preferred spoken language(s)?</div>
+          <div class="section2-container">
+            <div class="s2-question">What is your preferred spoken language(s)?</div>
                 <input type="checkbox" name="language" value="English">
                 <label for="english">English</label>
                 
@@ -170,8 +168,8 @@
                 
                 <input type="checkbox" name="language" value="Other">
                 <label for="other">Other</label><br><br>
-            
-             <div class="s2-questiontitle">Gender:</div>
+
+            <div class="s2-question">Gender:</div>
                 <input type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
 
@@ -180,8 +178,8 @@
 
                 <input type="radio" name="gender" value="Prefer-to-not-say">
                 <label for="prefer-to-not-say">Prefer to not say</label><br><br>
-            
-               <div class="s2-questiontitle">Marital Status:</div>
+
+            <div class="s2-questiontitle">Marital Status:</div>
                 <input type="radio" name="maritalstatus" value="Married">
                 <label for="married">Married</label>
 
@@ -196,20 +194,19 @@
 
                 <input type="radio" name="maritalstatus" value="Common-Law">
                 <label for="commonlaw">Common Law</label><br><br>
-            
-             <div class="s2-questiontitle">Have you experienced any fever-like symptoms in the past 14 days?</div> 
+
+            <div class="s2-question">Have you experienced any fever-like symptoms in the past 14 days?</div> 
                 <input type="radio" name="fever" value="Yes">
                 <label for="fever-yes">Yes</label>
 
                 <input type="radio" name="fever" value="No">
                 <label for="fever-no">No</label><br><br>
-            
-             <div class="s2-questiontitle">On a scale from 1-10, how would you rate your health today?</div><br>
-                  <input type="range" name="healthscale" id=healthscale>
           </div>
            <!-- Comment Box -->
+          <div class="s2-question">On a scale from 1-10, how would you rate your health today?</div><br>
+                <input type="range" name="healthscale" id=healthscale>
            <table>
-           <th colspan="3">Reason For Visit</th>
+           <th>Reason For Visit</th>
              <tr>
                <td>
                  <label for="reason"></label>
@@ -219,7 +216,7 @@
           </table>
           <!-- Create Username and Password -->
           <table>
-          <th colspan="3">Create Username and Password</th>
+          <th>Create Username and Password</th>
              <tr>
                <td>
                  <label for="user">Username</label>
