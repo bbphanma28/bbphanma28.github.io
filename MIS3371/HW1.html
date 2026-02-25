@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="HW1.css">
   </head>
  
-  <!-- Start of Body -->
+    <!-- Start of Body -->
     <body>
       
       <!-- Header -->
@@ -23,7 +23,7 @@
         <div>
           <table class="formheader">
             <tr>
-              <th class="formheader">Patient Registration Form</th>
+              <th>Patient Registration Form</th>
             </tr>
           </table>
         </div>
@@ -152,9 +152,10 @@
                 </td>
               </tr>
           </table>
-        </div>
+          </div>
           <!-- Checkboxes, Radio, and Slider -->
-          <table class="languages">
+          <div class="second-part">
+        	<table>
             <tr>
             <th colspan="3">What is your preferred language(s)?</th>
             </tr>
@@ -164,18 +165,18 @@
                 <label for="language1">English</label>
               </td>
               <td>
-                <input type="checkbox" name="english" value="English">                
+                <input type="checkbox" name="english" value="English">
                 <label for="language1">English</label>
               </td>
               <td>
-                <input type="checkbox" name="english" value="English">               
+                <input type="checkbox" name="english" value="English">
                 <label for="language1">English</label>
               <td>
-                <input type="checkbox" name="english" value="English">                
+                <input type="checkbox" name="english" value="English">
                 <label for="language1">English</label>
               </td>
               <td>
-                <input type="checkbox" name="english" value="English">               
+                <input type="checkbox" name="english" value="English">
                 <label for="language1">English</label>
               </td>
             </tr>
@@ -184,22 +185,22 @@
             <th colspan ="3">What is your preferred language(s)?</th>
             <tr>
               <td>
-                <input type="radio" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="radio" name="english" value="English">                
+                <input type="radio" name="english" value="English">
                 <label for="language1">English</label>
               </td>
               <td>
                 <input type="radio" name="english" value="English">
                 <label for="language1">English</label>
+              </td>
               <td>
-                <input type="radio" name="english" value="English">                
+                <input type="radio" name="english" value="English">
+                <label for="language1">English</label>
+                <td>
+                <input type="radio" name="english" value="English">
                 <label for="language1">English</label>
               </td>
               <td>
-                <input type="radio" name="english" value="English">              
+                <input type="radio" name="english" value="English">
                 <label for="language1">English</label>
               </td>
             </tr>
@@ -208,20 +209,19 @@
             <th colspan ="3">What is your preferred language(s)?</th>
               <tr>
                 <td>
-                  <label for="slider"></label>
                   <input type="range" name="english" value="English">
                 </td>
               </tr>
-            </table>
-            <!-- Comment Box -->
-            <table>
-              <th colspan="3"> Any concerns</th>
-                <td>
-                  <label for="comments"></label>
-                  <input type="text" id="comment" name="comment">
-                <td>
+           </table>
+           </div>
+           <!-- Comment Box -->
+          <table>
+            <th colspan="3">Any concerns</th>
+              <td>
+                <label for="comments"></label>
+                <input type="text" id="comment" name="comment">
+              <td>
           </table>
-          <!-- Create User Account -->
           <table>
             <th colspan="3">Create Username and Password</th><br>
               <tr>
@@ -237,10 +237,9 @@
                 </td>
               </tr>
           </table>  
-        <!-- Reset and Submit Button -->
-        <input type="submit">
-        <input type="reset">
-
+          
+          <input type="submit">
+          <input type="reset">
     </form>
      <script>
     document.getElementById("today").innerHTML = new Date().toLocaleDateString();
