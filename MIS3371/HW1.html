@@ -155,96 +155,58 @@
           </div>
           <!-- Checkboxes, Radio, and Slider -->
           <div class="second-part">
-        	<table>
-            <th colspan ="5">What is your preferred spoken language(s)?</th>
-            <tr>
-              <td>
+            <div class="s2-questiontitle">What is your preferred spoken language(s)?</div>
                 <input type="checkbox" name="language" value="English">
                 <label for="english">English</label>
-              </td>
-              <td>
+                
                 <input type="checkbox" name="language" value="Spanish">
                 <label for="spanish">Spanish</label>
-              </td>
-              <td>
+                
                 <input type="checkbox" name="language" value="Chinese">
                 <label for="chinese">Chinese</label>
-              </td>
-              <td>
+                
                 <input type="checkbox" name="language" value="Vietnamese">
                 <label for="vietnamese">Vietnamese</label>
-              </td>
-              <td>
+                
                 <input type="checkbox" name="language" value="Other">
-                <label for="other">Other</label>
-              </td>
-            </tr>
-          </table>
-          <table>
-            <th colspan ="5">Gender</th>
-            <tr>
-              <td>
+                <label for="other">Other</label><br><br>
+            
+             <div class="s2-questiontitle">Gender:</div>
                 <input type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
-              </td>
-              <td>
+
                 <input type="radio" name="gender" value="Male">
                 <label for="male">Male</label>
-              </td>
-              <td>
+
                 <input type="radio" name="gender" value="Prefer-to-not-say">
-                <label for="prefer-to-not-say">Prefer to not say</label>
-              </td>
-              </td>
-            </tr>
-          </table>
-          <table>
-            <th colspan ="5">Marital Status:</th>
-            <tr>
-              <td>
+                <label for="prefer-to-not-say">Prefer to not say</label><br><br>
+            
+               <div class="s2-questiontitle">Marital Status:</div>
                 <input type="radio" name="maritalstatus" value="Married">
                 <label for="married">Married</label>
-              </td>
-              <td>
+
                 <input type="radio" name="maritalstatus" value="Single">
                 <label for="single">Single</label>
-              </td>
-              <td>
+
                 <input type="radio" name="maritalstatus" value="Divorced">
                 <label for="divorced">Divorced</label>
-              </td>
-              <td>
+
                 <input type="radio" name="maritalstatus" value="Widowed">
                 <label for="widowed">Widowed</label>
-              </td>
-              <td>
+
                 <input type="radio" name="maritalstatus" value="Common-Law">
-                <label for="commonlaw">Common Law</label>
-              </td>
-            </tr>
-          </table>
-          <table>
-            <th colspan ="5">Have you experienced any fever-like symptoms in the past 14 days?</th>
-            <tr>
-              <td>
+                <label for="commonlaw">Common Law</label><br><br>
+            
+             <div class="s2-questiontitle">Have you experienced any fever-like symptoms in the past 14 days?</div> 
                 <input type="radio" name="fever" value="Yes">
-                <label for="yes">Yes</label>
-              </td>
-              <td>
+                <label for="fever-yes">Yes</label>
+
                 <input type="radio" name="fever" value="No">
-                <label for="no">No</label>
-              </td>
-            </tr>
-          </table>
-          <table>
-            <th colspan ="5">On a scale from 1-10, how would you rate your health today?</th>
-              <tr>
-                <td>
-                  <input type="range" name="healthscale" value="English">
-                </td>
-              </tr>
-           </table>
-           </div>
+                <label for="fever-no">No</label><br><br>
+            
+             <div class="s2-questiontitle">On a scale from 1-10, how would you rate your health today?</div>
+                  <input type="range" name="healthscale" id=healthscale>
+          </div>
            <!-- Comment Box -->
            <table>
            <th colspan="3">Reason For Visit</th>
@@ -267,7 +229,7 @@
              <tr>
                <td>
                  <label for="pass">Password</label>
-                 <input for="password" id="pass" name="pass">
+                 <input type="password" id="pass" name="pass">
                </td>
              </tr>
           </table>   
