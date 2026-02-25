@@ -1,15 +1,15 @@
 table {
   width: 100%;
 }
-
+ 
 .form-container {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	background-color: blue;
+	background-color: pink;
 	padding: 10px; 
 	border-radius: 10px; 
-	width: 60%
+	width: 70%
 }
  
  td {
@@ -19,51 +19,28 @@ table {
 .patient-header {
 	padding: 15px;
     text-align: center;
-	background-color: white;
+	background-color: red;
     margin: 0 auto;
 	border-radius: 10px;
     max-width: 100%;
 }
 
 .text-boxes {
-	background-color: white;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	max-width: 100%;
-}
-	border-radius: 10px; 
-	width: 60%
+background-color: blue;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 10px;
+max-width: 100%;
 }
 
-input, select {
-	border-radius: 10px;
-	font-size: 100%;
-	padding: 12px;
-	width: 100%;
-	box-sizing: border-box;
+.second-part {
+background-color: blue;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 10px;
+max-width: 100%;
 }
-
-#fname, #lname {
-	padding: 12px;
-    margin-right: 250px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-#birthday, #SSN, #city, #middleinit, #state {
-	padding: 12px;
-	box-sizing: border-box;
-    width: 100%;
-}
-
-#email {
-	padding: 12px;
-	box-sizing: border-box;
-    margin-right: 100px;
-    width: 100%;
-}
- /* input[type="text"],  input[type="date"], input[type="number"], select {
+ input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
@@ -73,20 +50,20 @@ input, select {
 
 #fname, #lname {
     margin-right: 300px;
-	box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 #city {
 	margin-right: 200px;
-	box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 select, #zip, #email {
 	margin-right: 100px;
-	box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 #address1, #address2 {
-    width: 260%;
-    box-sizing: border-box;
-} */
+	margin-right: 600px;
+    box-sizing: border-box; 
+}
