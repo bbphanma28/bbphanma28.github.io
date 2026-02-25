@@ -59,17 +59,15 @@ input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
-	width: 100%;
 	box-sizing: border-box;
 }
 
 #fname, #lname {
-    margin-right: 200px;
+    width: 50%;
 }
-
-#city {
-	margin-right: 200px;
-}
+#middleinit {
+	width: 10%;
+    }
 
 select, #zip, #email {
 	margin-right: 100px;
