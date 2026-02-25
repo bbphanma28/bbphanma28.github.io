@@ -1,27 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-  Program name: HW1
-  Author: Breanna Phanmaha
-  Date created: 02-09-2026
-  Date last edited: The date you submitted it
-  Version: 1.0
-  Description: Medical Form HTML pp
--->
-
 <html>
   <head>
     <title>BB28 Medical Form</title>
-    <link rel="stylesheet" href="HOMEWORK1.css">
+    <link rel="stylesheet" href="HW1.css">
   </head>
-  
-  <!-- Start of Body -->
+ 
+    <!-- Start of Body -->
     <body>
-      
       <!-- Header -->
       <div id="header">
         <table width = 100%>
           <tr>
-            <img id="logo" src="BB28medicalLogo.png">
             <td valign="top">BB28 Medical</td>
             <td valign="bottom" align="right">Today's date: <span id="today">Date goes here </span></td>
           </tr>
@@ -32,7 +21,7 @@
         <div>
           <table class="formheader">
             <tr>
-              <th class="formheader">Patient Registration Form</th>
+              <th>Patient Registration Form</th>
             </tr>
           </table>
         </div>
@@ -42,6 +31,7 @@
         <form action="homework1-thanks.html">
           <div class="patient-header">Patient Information</div>
           <!-- Enter Name -->
+          <div class="section1-container">
             <table>
               <tr>
                 <td>
@@ -145,6 +135,7 @@
               </td>
             </tr>
           </table>
+          <!-- Addresses -->
           <table>
               <tr>
                 <td>
@@ -159,94 +150,89 @@
                 </td>
               </tr>
           </table>
-        <!-- Checkboxes, Radio, and Slider -->
-          <table class="languages">
-            <tr>
-            <th colspan="3">What is your preferred language(s)?</th>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" name="english" value="English">
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="checkbox" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="checkbox" name="english" value="English">               
-                <label for="language1">English</label>
-              <td>
-                <input type="checkbox" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="checkbox" name="english" value="English">               
-                <label for="language1">English</label>
-              </td>
-            </tr>
-          </table>
-          <table class="languages">
-            <th colspan ="3">What is your preferred language(s)?</th>
-            <tr>
-              <td>
-                <input type="radio" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="radio" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="radio" name="english" value="English">
-                <label for="language1">English</label>
-              <td>
-                <input type="radio" name="english" value="English">                
-                <label for="language1">English</label>
-              </td>
-              <td>
-                <input type="radio" name="english" value="English">              
-                <label for="language1">English</label>
-              </td>
-            </tr>
-          </table>
-          <table class="languages">
-            <th colspan ="3">What is your preferred language(s)?</th>
-              <tr>
-                <td>
-                  <label for="slider"></label>
-                  <input type="range" name="english" value="English">
-                </td>
-              </tr>
-            </table>
-            <!-- Comment Box -->
-            <table>
-              <th colspan="3"> Any concerns</th>
-                <td>
-                  <label for="comments"></label>
-                  <input type="text" id="comment" name="comment">
-                <td>
-          </table>
-          <!-- Create User Account -->
-          <table>
-            <th colspan="3">Create Username and Password</th><br>
-              <tr>
-                <td>
-                  <label for="user">Username</label>
-                  <input type="text" id="user" name="user">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="pass">Password</label>
-                  <input for="password" id="pass" name="pass">
-                </td>
-              </tr>
-          </table>  
-        <!-- Reset and Submit Button -->
-        <input type="submit">
-        <input type="reset">
+          </div>
+          <!-- Checkboxes, Radio, and Slider -->
+          <div class="section2-container">
+            <div class="s2-question">What is your preferred spoken language(s)?</div>
+                <input type="checkbox" name="language" value="English">
+                <label for="english">English</label>
+                
+                <input type="checkbox" name="language" value="Spanish">
+                <label for="spanish">Spanish</label>
+                
+                <input type="checkbox" name="language" value="Chinese">
+                <label for="chinese">Chinese</label>
+                
+                <input type="checkbox" name="language" value="Vietnamese">
+                <label for="vietnamese">Vietnamese</label>
+                
+                <input type="checkbox" name="language" value="Other">
+                <label for="other">Other</label><br><br>
 
+            <div class="s2-question">Gender:</div>
+                <input type="radio" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input type="radio" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" value="Prefer-to-not-say">
+                <label for="prefer-to-not-say">Prefer to not say</label><br><br>
+
+            <div class="s2-questiontitle">Marital Status:</div>
+                <input type="radio" name="maritalstatus" value="Married">
+                <label for="married">Married</label>
+
+                <input type="radio" name="maritalstatus" value="Single">
+                <label for="single">Single</label>
+
+                <input type="radio" name="maritalstatus" value="Divorced">
+                <label for="divorced">Divorced</label>
+
+                <input type="radio" name="maritalstatus" value="Widowed">
+                <label for="widowed">Widowed</label>
+
+                <input type="radio" name="maritalstatus" value="Common-Law">
+                <label for="commonlaw">Common Law</label><br><br>
+
+            <div class="s2-question">Have you experienced any fever-like symptoms in the past 14 days?</div> 
+                <input type="radio" name="fever" value="Yes">
+                <label for="fever-yes">Yes</label>
+
+                <input type="radio" name="fever" value="No">
+                <label for="fever-no">No</label><br><br>
+          </div>
+           <!-- Comment Box -->
+          <div class="s2-question">On a scale from 1-10, how would you rate your health today?</div><br>
+                <input type="range" name="healthscale" id=healthscale>
+           <table>
+           <th>Reason For Visit</th>
+             <tr>
+               <td>
+                 <label for="reason"></label>
+                 <input type="text" id="reason" name="reason">
+               </td>
+             </tr>
+          </table>
+          <!-- Create Username and Password -->
+          <table>
+          <th>Create Username and Password</th>
+             <tr>
+               <td>
+                 <label for="user">Username</label>
+                 <input type="text" id="user" name="user">
+               </td>
+             </tr>
+             <tr>
+               <td>
+                 <label for="pass">Password</label>
+                 <input type="password" id="pass" name="pass">
+               </td>
+             </tr>
+          </table>   
+          
+          <input type="submit">
+          <input type="reset">
     </form>
      <script>
     document.getElementById("today").innerHTML = new Date().toLocaleDateString();
