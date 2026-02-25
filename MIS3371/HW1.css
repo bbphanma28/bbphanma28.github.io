@@ -24,17 +24,16 @@ table {
     margin: 0 auto;
 	border-radius: 10px;
     max-width: 100%;
-	margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .text-boxes {
 	background-color: deeppink;
     border: 4px solid white;
 	padding: 10px;
-	padding-bottom: 10px;
 	border-radius: 10px;
 	max-width: 100%;
-	margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .second-part {
@@ -45,7 +44,7 @@ table {
 	padding: 10px;
     padding-top: 10px;
     padding-bottom: 20px;
-	margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 input[type="text"],  input[type="date"], input[type="number"], select {
@@ -56,9 +55,13 @@ input[type="text"],  input[type="date"], input[type="number"], select {
 	box-sizing: border-box;
 }
 
-#fname, #lname, #city {
+#fname, #lname {
     margin-right: 200px;
+}
 
+#city {
+	margin-right: 200px;
+}
 
 select, #zip, #email {
 	margin-right: 100px;
