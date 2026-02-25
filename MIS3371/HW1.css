@@ -6,7 +6,7 @@ table {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	background-color: pink;
+	border: 10px solid pink;
 	padding: 10px; 
 	border-radius: 10px; 
 	width: 55%
