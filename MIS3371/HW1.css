@@ -6,7 +6,7 @@ table {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	background-color: blue;
+	background-color: pink;
 	padding: 30px; 
 	border-radius: 10px; 
 	width: 55%
@@ -17,9 +17,9 @@ table {
 }
 
 .patient-header {
-	padding: 15px;
+	padding: 10px;
     text-align: center;
-	border: 10px red;
+	background-color: red;
     margin: 0 auto;
 	border-radius: 10px;
     max-width: 100%;
