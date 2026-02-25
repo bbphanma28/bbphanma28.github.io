@@ -26,19 +26,19 @@ table {
 }
 
 .text-boxes {
-background-color: blue;
-margin-top: 10px;
-margin-bottom: 10px;
-border-radius: 10px;
-max-width: 100%;
+	background-color: blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	max-width: 100%;
 }
 
 .second-part {
-background-color: blue;
-margin-top: 10px;
-margin-bottom: 10px;
-border-radius: 10px;
-max-width: 100%;
+	background-color: blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	max-width: 100%;
 }
  input[type="text"],  input[type="date"], input[type="number"], select {
 	border-radius: 10px;
