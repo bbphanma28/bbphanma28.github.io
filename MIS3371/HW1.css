@@ -29,6 +29,7 @@ table {
 .text-boxes {
 	background-color: deeppink;
     border: 4px solid white;
+	padding: 10px;
 	padding-bottom: 10px;
 	border-radius: 10px;
 	max-width: 100%;
@@ -37,7 +38,9 @@ table {
 .second-part {
 	background-color: deeppink;
     border: 4px solid white;
+	border-radius: 10px;
 	max-width: 100%;
+	padding: 10px;
     padding-top: 10px;
     padding-bottom: 20px;
 }
