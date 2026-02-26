@@ -153,7 +153,11 @@
           </div>
           <!-- Checkboxes, Radio, and Slider -->
           <div class="section2-container">
-            <div class="s2-question">What is your preferred spoken language(s)?</div>
+            <table class="s2">
+              <tr>
+              <th>What is your preferred spoken language(s)?</th>
+              </tr>
+                <td>
                 <input type="checkbox" name="language" value="English">
                 <label for="english">English</label>
                 
@@ -167,9 +171,14 @@
                 <label for="vietnamese">Vietnamese</label>
                 
                 <input type="checkbox" name="language" value="Other">
-                <label for="other">Other</label><br><br>
-
-            <div class="s2-question">Gender:</div>
+                <label for="other">Other</label>
+                </td>
+            </table>
+            <table class="s2">
+              <tr>
+                <th>Gender:</th>
+              </tr>
+                <td>
                 <input type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
 
@@ -177,9 +186,14 @@
                 <label for="male">Male</label>
 
                 <input type="radio" name="gender" value="Prefer-to-not-say">
-                <label for="prefer-to-not-say">Prefer to not say</label><br><br>
-
-            <div class="s2-questiontitle">Marital Status:</div>
+                <label for="prefer-to-not-say">Prefer to not say</label>
+                </td>
+            </table>
+            <table class="s2">
+              <tr>
+                <th>Marital Status:</th>
+              </tr>
+              <td>
                 <input type="radio" name="maritalstatus" value="Married">
                 <label for="married">Married</label>
 
@@ -193,7 +207,9 @@
                 <label for="widowed">Widowed</label>
 
                 <input type="radio" name="maritalstatus" value="Common-Law">
-                <label for="commonlaw">Common Law</label><br><br>
+                <label for="commonlaw">Common Law</label>
+              </td>
+            </table>
 
             <div class="s2-question">Have you experienced any fever-like symptoms in the past 14 days?</div> 
                 <input type="radio" name="fever" value="Yes">
