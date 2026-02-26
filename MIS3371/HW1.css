@@ -45,11 +45,8 @@ input[type="text"],  input[type="date"], input[type="number"], input[type="passw
 	box-sizing: border-box;
 }
 
-#fname, #lname {
-    margin-right: 140px;
-}
-#city {
-	margin: 100px;
+#fname, #lname, #city {
+    margin-right: 120px;
 }
 
 select, #zip, #email {
