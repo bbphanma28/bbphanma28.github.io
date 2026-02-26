@@ -226,7 +226,8 @@
               <th>On a scale from 1-10, how would you rate your health today?</th>
               <tr>
                 <td>
-                  <input type="range" name="healthscale" id=healthscale>                  
+                  <input type="range" min="1" max="10" value="5" name="healthscale" class="slider" id="healthslider">
+                  <p>Scale: <span id="scale"></span></p>               
                 </td>
               </tr>
      
@@ -261,7 +262,12 @@
           </div>
     </form>
      <script>
-    document.getElementById("today").innerHTML = new Date().toLocaleDateString();
+    document.getElementById("today").innerHTML = new Date().toLocaleDateString();       
+    var slider = document.getElementById("healthslider");
+    var output = document.getElementById("scale");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+      output.innerHTML = this.value; }
     </script>
     </body>
 </html>
