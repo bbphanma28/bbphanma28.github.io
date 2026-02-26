@@ -37,7 +37,7 @@ table {
     margin-bottom: 20px;
 }
 
-input[type="text"],  input[type="date"], input[type="number"], input[type="password"], select {
+input[type="text"],  input[type="date"], input[type="number"], input[type="password"], select, textarea {
 	border-radius: 10px;
 	font-size: 100%;
 	padding: 12px;
@@ -57,7 +57,7 @@ select, #zip, #email {
 }
 
 #address1, #address2 {
-	margin-right: 300;
+	margin-right: 300px;
 }
 
 .section2-container {
