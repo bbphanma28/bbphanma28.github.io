@@ -226,16 +226,15 @@
               <th>On a scale from 1-10, how would you rate your health today?</th>
               <tr>
                 <td>
-                  <input type="range" min="1" max="10" value="5" name="healthscale" class="slider" id="healthslider">
-                  <p>Scale: <span id="scale"></span></p>               
+                  <input type="range" min="1" max="10" value="5" name="healthslide" id="healthslider">
+                  <p id="healthscale">Scale: <span id="scale"></span></p>               
                 </td>
               </tr>
      
-           <th>Reason For Visit</th>
+           <th>Reason for Visit:</th>
              <tr>
                <td>
-                 <label for="reason"></label>
-                 <input type="text" id="reason" name="reason">
+                 <textarea id="visitreason" name="visitreason" rows="8" cols="60"></textarea>
                </td>
              </tr>
           </table>
