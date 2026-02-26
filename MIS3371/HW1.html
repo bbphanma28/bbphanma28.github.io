@@ -29,7 +29,7 @@
         <!-- Form Start -->
       <div class="form-container">
         <form action="homework1-thanks.html">
-          <div class="patient-header">Patient Information</div>
+          <div id="patient-header">Patient Information</div>
           <!-- Enter Name -->
           <div class="section1-container">
             <table>
@@ -154,70 +154,74 @@
           <!-- Checkboxes, Radio, and Slider -->
           <div class="section2-container">
             <table class="s2">
-              <tr>
               <th>What is your preferred spoken language(s)?</th>
-              </tr>
-                <td>
-                <input type="checkbox" name="language" value="English">
-                <label for="english">English</label>
-                
-                <input type="checkbox" name="language" value="Spanish">
-                <label for="spanish">Spanish</label>
-                
-                <input type="checkbox" name="language" value="Chinese">
-                <label for="chinese">Chinese</label>
-                
-                <input type="checkbox" name="language" value="Vietnamese">
-                <label for="vietnamese">Vietnamese</label>
-                
-                <input type="checkbox" name="language" value="Other">
-                <label for="other">Other</label>
-                </td>
+                <tr>
+                  <td>
+                  <input type="checkbox" name="language" value="English">
+                  <label for="english">English</label>
+                  
+                  <input type="checkbox" name="language" value="Spanish">
+                  <label for="spanish">Spanish</label>
+                  
+                  <input type="checkbox" name="language" value="Chinese">
+                  <label for="chinese">Chinese</label>
+                  
+                  <input type="checkbox" name="language" value="Vietnamese">
+                  <label for="vietnamese">Vietnamese</label>
+                  
+                  <input type="checkbox" name="language" value="Other">
+                  <label for="other">Other</label>
+                  </td>
+                </tr>
             </table>
             <table class="s2">
-              <tr>
-                <th>Gender:</th>
-              </tr>
-                <td>
-                <input type="radio" name="gender" value="Female">
-                <label for="female">Female</label>
-
-                <input type="radio" name="gender" value="Male">
-                <label for="male">Male</label>
-
-                <input type="radio" name="gender" value="Prefer-to-not-say">
-                <label for="prefer-to-not-say">Prefer to not say</label>
-                </td>
+              <th>Gender:</th>
+                <tr>
+                  <td>
+                  <input type="radio" name="gender" value="Female">
+                  <label for="female">Female</label>
+  
+                  <input type="radio" name="gender" value="Male">
+                  <label for="male">Male</label>
+  
+                  <input type="radio" name="gender" value="Prefer-to-not-say">
+                  <label for="prefer-to-not-say">Prefer to not say</label>
+                  </td>
+                </tr>
             </table>
             <table class="s2">
-              <tr>
                 <th>Marital Status:</th>
+              <tr>
+                <td>
+                  <input type="radio" name="maritalstatus" value="Married">
+                  <label for="married">Married</label>
+  
+                  <input type="radio" name="maritalstatus" value="Single">
+                  <label for="single">Single</label>
+  
+                  <input type="radio" name="maritalstatus" value="Divorced">
+                  <label for="divorced">Divorced</label>
+  
+                  <input type="radio" name="maritalstatus" value="Widowed">
+                  <label for="widowed">Widowed</label>
+  
+                  <input type="radio" name="maritalstatus" value="Common-Law">
+                  <label for="commonlaw">Common Law</label>
+                </td>
               </tr>
-              <td>
-                <input type="radio" name="maritalstatus" value="Married">
-                <label for="married">Married</label>
-
-                <input type="radio" name="maritalstatus" value="Single">
-                <label for="single">Single</label>
-
-                <input type="radio" name="maritalstatus" value="Divorced">
-                <label for="divorced">Divorced</label>
-
-                <input type="radio" name="maritalstatus" value="Widowed">
-                <label for="widowed">Widowed</label>
-
-                <input type="radio" name="maritalstatus" value="Common-Law">
-                <label for="commonlaw">Common Law</label>
-              </td>
             </table>
-
-            <div class="s2-question">Have you experienced any fever-like symptoms in the past 14 days?</div> 
-                <input type="radio" name="fever" value="Yes">
-                <label for="fever-yes">Yes</label>
-
-                <input type="radio" name="fever" value="No">
-                <label for="fever-no">No</label><br><br>
-          </div>
+            <table class="s2">
+              <th>Have you experienced any fever-like symptoms in the past 14 days?</th> 
+                <tr>
+                  <td>
+                  <input type="radio" name="fever" value="Yes">
+                  <label for="fever-yes">Yes</label>
+  
+                  <input type="radio" name="fever" value="No">
+                  <label for="fever-no">No</label>
+                  </td>
+                </tr>
+            </table>
            <!-- Comment Box -->
           <div class="s2-question">On a scale from 1-10, how would you rate your health today?</div><br>
                 <input type="range" name="healthscale" id=healthscale>
