@@ -151,7 +151,7 @@
               </tr>
           </table>
           </div>
-          <!-- Checkboxes, Radio, and Slider -->
+          <!-- Checkbox and Radio -->
           <div class="section2-container">
             <table class="s2">
               <th>What is your preferred spoken language(s)?</th>
@@ -173,8 +173,7 @@
                   <label for="other">Other</label>
                   </td>
                 </tr>
-            </table>
-            <table class="s2">
+              
               <th>Gender:</th>
                 <tr>
                   <td>
@@ -188,8 +187,7 @@
                   <label for="prefer-to-not-say">Prefer to not say</label>
                   </td>
                 </tr>
-            </table>
-            <table class="s2">
+              
                 <th>Marital Status:</th>
               <tr>
                 <td>
@@ -209,8 +207,7 @@
                   <label for="commonlaw">Common Law</label>
                 </td>
               </tr>
-            </table>
-            <table class="s2">
+              
               <th>Have you experienced any fever-like symptoms in the past 14 days?</th> 
                 <tr>
                   <td>
@@ -222,10 +219,13 @@
                   </td>
                 </tr>
             </table>
-           <!-- Comment Box -->
-          <div class="s2-question">On a scale from 1-10, how would you rate your health today?</div><br>
-                <input type="range" name="healthscale" id=healthscale>
-           <table>
+          </div>
+           <!-- Comment Box and Slider -->
+          <div class="section3-container">
+            <table>
+              <th>On a scale from 1-10, how would you rate your health today?</th>
+              <input type="range" name="healthscale" id=healthscale>
+              
            <th>Reason For Visit</th>
              <tr>
                <td>
@@ -234,25 +234,27 @@
                </td>
              </tr>
           </table>
+          </div>
           <!-- Create Username and Password -->
-          <table>
-          <th>Create Username and Password</th>
-             <tr>
-               <td>
-                 <label for="user">Username</label>
-                 <input type="text" id="user" name="user">
-               </td>
-             </tr>
-             <tr>
-               <td>
-                 <label for="pass">Password</label>
-                 <input type="password" id="pass" name="pass">
-               </td>
-             </tr>
-          </table>   
-          
-          <input type="submit">
-          <input type="reset">
+          <div class="section4-container">
+            <table>
+            <th>Create Username and Password</th>
+               <tr>
+                 <td>
+                   <label for="user">Username</label>
+                   <input type="text" id="user" name="user">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <label for="pass">Password</label>
+                   <input type="password" id="pass" name="pass">
+                 </td>
+               </tr>
+            </table>   
+            <input type="submit">
+            <input type="reset">
+          </div>
     </form>
      <script>
     document.getElementById("today").innerHTML = new Date().toLocaleDateString();
