@@ -115,3 +115,7 @@ input[type="range"] {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
+.submitreset-container {
+	text-align: center;
+}
