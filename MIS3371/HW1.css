@@ -32,7 +32,8 @@ table {
     border: 4px solid white;
 	padding: 10px;
 	border-radius: 10px;
-	max-width: 100%;
+	width: 80%;
+	margin: 0 auto;
     margin-bottom: 20px;
 }
 
@@ -60,7 +61,8 @@ select, #zip, #email {
 	background-color: deeppink;
     border: 4px solid white;
 	border-radius: 10px;
-	max-width: 100%;
+	width: 80%;
+	margin: 0 auto;
 	padding: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -87,7 +89,8 @@ input[type="range"] {
 	background-color: deeppink;
     border: 4px solid white;
 	border-radius: 10px;
-	max-width: 100%;
+	width: 80%;
+	margin: 0 auto;
 	padding: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -109,7 +112,8 @@ input[type="range"] {
 	background-color: deeppink;
     border: 4px solid white;
 	border-radius: 10px;
-	max-width: 100%;
+	width: 80%;
+	margin: 0 auto;
 	padding: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
