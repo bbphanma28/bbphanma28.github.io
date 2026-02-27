@@ -90,7 +90,7 @@ select, #zip, #email {
 	margin-bottom: 20px;
 }
 
-.s2 {
+#s2 {
 	margin: 10px;
 	text-align: left;
 }
@@ -153,7 +153,7 @@ input[type="range"] {
 	text-align: center;
 }
 
-.footer {
+#footer {
 	display: flex;
 	justify-content: center;
 	margin-top: 40px;
