@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
+<!--
+
+-->
+
 <html>
   <head>
     <title>BB28 Medical Form</title>
@@ -11,6 +15,7 @@
       <div id="header">
         <table width = 100%>
           <tr>
+            <img src="BB28medicalLogo.png" alt="BB28 Medical Logo">
             <td valign="top">BB28 Medical</td>
             <td valign="bottom" align="right">Today's date: <span id="today">Date goes here </span></td>
           </tr>
@@ -28,22 +33,22 @@
         
         <!-- Form Start -->
       <div class="form-container">
-        <form action="homework1-thanks.html">
+        <form action="HW1-nextpage.html">
           <!-- Enter Name -->
           <div class="section1-container">
             <table>
               <tr>
                 <td>
                   <label for="firstname">First Name</label>
-                  <input type="text" id="fname" name="firstname">
+                  <input type="text" id="fname" name="firstname" maxlength="30" required>
                 </td>
                 <td>
                   <label for="lastname">Last Name</label>
-                  <input type="text" id="lname" name="lastname">
+                  <input type="text" id="lname" name="lastname" maxlength="30" required>
                 </td>
                 <td>
                   <label for="middleinitial">Middle Initial</label>
-                  <input type="text" id="middleinit" name="middleinit">
+                  <input type="text" id="middleinit" name="middleinit" maxlength="1">
                 </td>
               </tr>
           </table>
@@ -52,15 +57,15 @@
              <tr>
                 <td>
                   <label for= "birthday">DOB</label>
-                  <input type="date" id="birthday" name="birthday">
+                  <input type="date" id="birthday" name="birthday" required>
                 </td>
                 <td>
                   <label for="SSN">SSN</label>
-                  <input type="number" id="SSN" name="SSN" size="9" maxlength="9">
+                  <input type="number" id="SSN" name="SSN" maxlength="11" required>
                 </td>
                 <td>
                   <label for="email">Email Address</label>
-                  <input type="text" id="email" name="email">
+                  <input type="text" id="email" name="email" required>
                 </td>
               </tr>
           </table>
@@ -69,7 +74,7 @@
             <tr>
               <td>
                 <label for="city">City</label>
-                <input type="text" id="city" name="city">
+                <input type="text" id="city" name="city" maxlength="30" required>
               </td>
               <td>
                 <label for="state">State</label>
@@ -139,13 +144,13 @@
               <tr>
                 <td>
                   <label for="address1">Address 1</label>
-                  <input type="text" id="address1" name="address1">
+                  <input type="text" id="address1" name="address1" maxlength="30" required>
                 </td>
               </tr>
               <tr>
                 <td>
                   <label for="address2">Address 2</label>
-                  <input type="text" id="address2" name="address2">
+                  <input type="text" id="address2" name="address2" maxlength="30">
                 </td>
               </tr>
           </table>
@@ -233,7 +238,7 @@
            <th>Reason for Visit:</th>
              <tr>
                <td>
-                 <textarea id="visitreason" name="visitreason" rows="8" cols="60"></textarea>
+                 <textarea id="visitreason" name="visitreason" rows="8" cols="60" required></textarea>
                </td>
              </tr>
           </table>
@@ -245,15 +250,21 @@
                  <tr>
                    <td>
                      <label for="user">Username</label>
-                     <input type="text" id="user" name="user">
+                     <input type="text" id="user" name="user" maxlength="30" required>
                    </td>
                  </tr>
                  <tr>
                    <td>
                      <label for="pass">Password</label>
-                     <input type="password" id="pass" name="pass">
+                     <input type="password" id="pass" name="pass" required>
                    </td>
                  </tr>
+                <tr>
+                  <td>
+                    <label for="confirmpass">Confirm Password</label>
+                    <input type="password" id="confirmpass" name="confirmpass">
+                  </td>
+                </tr>
               </table> 
             </div>
             <div class="submitreset-container">
@@ -261,7 +272,12 @@
               <input type="reset">
           </div>
       </div>
-    </form>
+    </form>    
+    <div id="footer">
+      <p>Our Contact Information:</p>
+      <button type="button" onclick="alert(BB28Medical@yahoo.com)"></button>
+    </div>
+      
      <script>
     document.getElementById("today").innerHTML = new Date().toLocaleDateString();       
     var slider = document.getElementById("healthslider");
