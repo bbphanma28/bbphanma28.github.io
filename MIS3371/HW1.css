@@ -7,6 +7,23 @@ Class: MIS 3371
 body {
 }
 
+img {
+	display: block;
+	justify-content: center;
+}
+
+#formheader {
+	display: flex;
+	justify-content: center;
+	margin: 20px auto;
+	padding: 10px;
+	background-color: pink;
+	border: solid red;
+	border-radius: 10px;
+	width: 70%;
+	font-size: 30px;
+}
+
 .form-container {
 	display: flex;
 	justify-content: center;
@@ -108,4 +125,19 @@ input[type="range"] {
 
 .submitreset-container {
 	text-align: center;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	background-color: pink;
+	gap: 10px;
+	padding: 10px;
+}
+
+button {
+	width: 5%;
+	height: 10%;
+	margin-top: 15px;
 }
