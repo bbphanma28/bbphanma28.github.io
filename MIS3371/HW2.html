@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+Author: Breanna Phanmaha
+Date created: 2/9/2026
+Date last edited: 2/27/2026
+Version: 1.8
+Description: HTML base of medical form webpage
+-->
+
+<html>
+  <head>
+    <title>BB28 Medical Form</title>
+    <link rel="stylesheet" href="HW1.css">
+  </head>
+ 
+    <!-- Start of Body -->
+    <body>
+      <!-- Header -->
+      <div id="header">
+            <div id="imglogo">
+              <img src="BB28medicalLogo.png" alt="BB28 Medical Logo">
+              <div id="medicalname">BB28 Medical</div>
+            </div>
+            <div id="todaysdate">Today's date: <span id="today">Date goes here </span></div>
+      </div>
+
+      <!-- Form Header -->
+        <div>
+          <table id="formheader">
+            <tr>
+              <th>Patient Registration Form</th>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Form Start -->
+      <div class="form-container">
+        <form action="HW1-nextpage.html">
+          <!-- Enter Name -->
+          <div class="section-container">
+            <table>
+              <tr>
+                <td>
+                  <label for="firstname">First Name<span class="red">*</span></label>
+                  <input type="text" id="fname" name="firstname" maxlength="30" required>
+                </td>
+                <td>
+                  <label for="lastname">Last Name<span class="red">*</span></label>
+                  <input type="text" id="lname" name="lastname" maxlength="30" required>
+                </td>
+                <td>
+                  <label for="middleinitial">Middle Initial</label>
+                  <input type="text" id="middleinit" name="middleinit" maxlength="1">
+                </td>
+              </tr>
+          </table>
+          <!-- Enter DOB, SSN, and Email -->
+          <table>
+             <tr>
+                <td>
+                  <label for= "birthday">DOB<span class="red">*</span></label>
+                  <input type="date" id="birthday" name="birthday" required>
+                </td>
+                <td>
+                  <label for="SSN">SSN<span class="red">*</span></label>
+                  <input type="number" id="SSN" name="SSN" maxlength="11" required>
+                </td>
+                <td>
+                  <label for="email">Email Address<span class="red">*</span></label>
+                  <input type="text" id="email" name="email" required>
+                </td>
+              </tr>
+          </table>
+          <!-- Enter City, State, and ZIP -->
+          <table>
+            <tr>
+              <td>
+                <label for="city">City<span class="red">*</span></label>
+                <input type="text" id="city" name="city" maxlength="30" required>
+              </td>
+              <td>
+                <label for="state">State<span class="red">*</span></label>
+                <select required>
+                <option value=""></option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+              </td>
+              <td>
+                <label for="zip">Zip Code<span class="red">*</span></label>
+                <input type="text"  pattern="[0-9]{5}" size="5" maxlength="5" id="zip" name="zip" required>
+              </td>
+            </tr>
+          </table>
+          <!-- Addresses -->
+          <table>
+              <tr>
+                <td>
+                  <label for="address1">Address 1<span class="red">*</span></label>
+                  <input type="text" id="address1" name="address1" maxlength="30" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="address2">Address 2</label>
+                  <input type="text" id="address2" name="address2" maxlength="30">
+                </td>
+              </tr>
+          </table>
+          </div>
+          <!-- Checkbox and Radio -->
+          <div class="section-container">
+            <table id="s2">
+              <th>What is your preferred spoken language(s)?</th>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="language" value="English">
+                    <label for="english">English</label>
+                    
+                    <input type="checkbox" name="language" value="Spanish">
+                    <label for="spanish">Spanish</label>
+                    
+                    <input type="checkbox" name="language" value="Chinese">
+                    <label for="chinese">Chinese</label>
+                    
+                    <input type="checkbox" name="language" value="Vietnamese">
+                    <label for="vietnamese">Vietnamese</label>
+                    
+                    <input type="checkbox" name="language" value="Other">
+                    <label for="other">Other</label>
+                  </td>
+                </tr>
+              
+              <th>Gender:</th>
+                <tr>
+                  <td>
+                    <input type="radio" name="gender" value="Female">
+                    <label for="female">Female</label>
+    
+                    <input type="radio" name="gender" value="Male">
+                    <label for="male">Male</label>
+    
+                    <input type="radio" name="gender" value="Prefer-to-not-say">
+                    <label for="prefer-to-not-say">Prefer to not say</label>
+                  </td>
+                </tr>
+              
+                <th>Marital Status:</th>
+              <tr>
+                <td>
+                  <input type="radio" name="maritalstatus" value="Married">
+                  <label for="married">Married</label>
+  
+                  <input type="radio" name="maritalstatus" value="Single">
+                  <label for="single">Single</label>
+  
+                  <input type="radio" name="maritalstatus" value="Divorced">
+                  <label for="divorced">Divorced</label>
+  
+                  <input type="radio" name="maritalstatus" value="Widowed">
+                  <label for="widowed">Widowed</label>
+  
+                  <input type="radio" name="maritalstatus" value="Common-Law">
+                  <label for="commonlaw">Common Law</label>
+                </td>
+              </tr>
+              
+              <th>Have you experienced any fever-like symptoms in the past 14 days?</th> 
+                <tr>
+                  <td>
+                    <input type="radio" name="fever" value="Yes">
+                    <label for="fever-yes">Yes</label>
+    
+                    <input type="radio" name="fever" value="No">
+                    <label for="fever-no">No</label>
+                  </td>
+                </tr>
+            </table>
+          </div>
+           <!-- Comment Box and Slider -->
+          <div class="section-container">
+            <table>
+              <th>On a scale from 1-10, how would you rate your health today?<span class="red">*</span></th>
+              <tr>
+                <td>
+                  <input type="range" min="1" max="10" value="5" name="healthslide" id="healthslider">
+                  <p id="healthscale">Scale: <span id="scale"></span></p>               
+                </td>
+              </tr>
+     
+           <th>Reason for Visit:<span class="red">*</span></th>
+             <tr>
+               <td>
+                 <textarea id="visitreason" name="visitreason" rows="8" cols="60" required></textarea>
+               </td>
+             </tr>
+          </table>
+          </div>
+          <!-- Create Username and Password -->
+          <div class="section-container">
+            <div id="create-header">Create an Account</div>
+              <table>
+                 <tr>
+                   <td>
+                     <label for="user">Username<span class="red">*</span></label>
+                     <input type="text" id="user" name="user" maxlength="30" required>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>
+                     <label for="pass">Password<span class="red">*</span></label>
+                     <input type="password" id="pass" name="pass" required>
+                   </td>
+                 </tr>
+                <tr>
+                  <td>
+                    <label for="confirmpass">Confirm Password<span class="red">*</span></label>
+                    <input type="password" id="confirmpass" name="confirmpass" required>
+                  </td>
+                </tr>
+              </table> 
+            </div>
+            <div class="submitreset-container">
+              <input type="submit">
+              <input type="reset">
+          </div>
+      </form>
+      </div>
+      
+    <div id="footer">
+      <p>Our Contact Information:</p>
+      <button type="button" onclick="alert('BB28Medical@yahoo.com')">Here</button>
+    </div>
+      
+     <script>
+    document.getElementById("today").innerHTML = new Date().toLocaleDateString();       
+    var slider = document.getElementById("healthslider");
+    var output = document.getElementById("scale");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+      output.innerHTML = this.value; }
+    </script>
+    </body>
+</html>
