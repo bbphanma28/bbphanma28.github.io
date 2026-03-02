@@ -147,6 +147,7 @@ input[type="range"] {
 	justify-content: center;
 	margin-top: 40px;
 	background-color: #1499BD;
+	color: #E1FEF4;
 	gap: 10px;
 	padding: 10px;
 }
