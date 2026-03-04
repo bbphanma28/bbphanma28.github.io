@@ -43,7 +43,7 @@ body {
 	font-size: 20pt;
 }
 
-.form-container {
+#form-container {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
