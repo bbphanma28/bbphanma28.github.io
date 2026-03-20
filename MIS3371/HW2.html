@@ -10,7 +10,7 @@ Description: HTML base of medical form webpage
 <html>
   <head>
     <title>BB28 Medical Form</title>
-    <link rel="stylesheet" href="HW1.css">
+    <link rel="stylesheet" href="HW2.css">
   </head>
  
     <!-- Start of Body -->
@@ -41,11 +41,11 @@ Description: HTML base of medical form webpage
             <table>
               <tr>
                 <td>
-                  <label for="firstname">First Name<span class="red">*</span></label>
+                  <label for="firstname">First Name<span class="red"></span></label>
                   <input type="text" id="fname" name="firstname" maxlength="30" required>
                 </td>
                 <td>
-                  <label for="lastname">Last Name<span class="red">*</span></label>
+                  <label for="lastname">Last Name<span class="red"</span></label>
                   <input type="text" id="lname" name="lastname" maxlength="30" required>
                 </td>
                 <td>
@@ -58,15 +58,15 @@ Description: HTML base of medical form webpage
           <table>
              <tr>
                 <td>
-                  <label for= "birthday">DOB<span class="red">*</span></label>
+                  <label for= "birthday">DOB<span class="red"></span></label>
                   <input type="date" id="birthday" name="birthday" required>
                 </td>
                 <td>
-                  <label for="SSN">SSN<span class="red">*</span></label>
+                  <label for="SSN">SSN<span class="red"></span></label>
                   <input type="number" id="SSN" name="SSN" maxlength="11" required>
                 </td>
                 <td>
-                  <label for="email">Email Address<span class="red">*</span></label>
+                  <label for="email">Email Address<span class="red"></span></label>
                   <input type="text" id="email" name="email" required>
                 </td>
               </tr>
@@ -75,11 +75,11 @@ Description: HTML base of medical form webpage
           <table>
             <tr>
               <td>
-                <label for="city">City<span class="red">*</span></label>
+                <label for="city">City<span class="red"></span></label>
                 <input type="text" id="city" name="city" maxlength="30" required>
               </td>
               <td>
-                <label for="state">State<span class="red">*</span></label>
+                <label for="state">State<span class="red"></span></label>
                 <select required>
                 <option value=""></option>
                 <option value="AL">Alabama</option>
@@ -136,7 +136,7 @@ Description: HTML base of medical form webpage
             </select>
               </td>
               <td>
-                <label for="zip">Zip Code<span class="red">*</span></label>
+                <label for="zip">Zip Code<span class="red"></span></label>
                 <input type="text"  pattern="[0-9]{5}" size="5" maxlength="5" id="zip" name="zip" required>
               </td>
             </tr>
@@ -145,7 +145,7 @@ Description: HTML base of medical form webpage
           <table>
               <tr>
                 <td>
-                  <label for="address1">Address 1<span class="red">*</span></label>
+                  <label for="address1">Address 1<span class="red"></span></label>
                   <input type="text" id="address1" name="address1" maxlength="30" required>
                 </td>
               </tr>
@@ -229,7 +229,7 @@ Description: HTML base of medical form webpage
            <!-- Comment Box and Slider -->
           <div class="section-container">
             <table>
-              <th>On a scale from 1-10, how would you rate your health today?<span class="red">*</span></th>
+              <th>On a scale from 1-10, how would you rate your health today?<span class="red"></span></th>
               <tr>
                 <td>
                   <input type="range" min="1" max="10" value="5" name="healthslide" id="healthslider">
@@ -237,7 +237,7 @@ Description: HTML base of medical form webpage
                 </td>
               </tr>
      
-           <th>Reason for Visit:<span class="red">*</span></th>
+           <th>Reason for Visit:<span class="red"></span></th>
              <tr>
                <td>
                  <textarea id="visitreason" name="visitreason" rows="8" cols="60" required></textarea>
@@ -251,19 +251,19 @@ Description: HTML base of medical form webpage
               <table>
                  <tr>
                    <td>
-                     <label for="user">Username<span class="red">*</span></label>
+                     <label for="user">Username<span class="red"></span></label>
                      <input type="text" id="user" name="user" maxlength="30" required>
                    </td>
                  </tr>
                  <tr>
                    <td>
-                     <label for="pass">Password<span class="red">*</span></label>
+                     <label for="pass">Password<span class="red"></span></label>
                      <input type="password" id="pass" name="pass" required>
                    </td>
                  </tr>
                 <tr>
                   <td>
-                    <label for="confirmpass">Confirm Password<span class="red">*</span></label>
+                    <label for="confirmpass">Confirm Password<span class="red"></span></label>
                     <input type="password" id="confirmpass" name="confirmpass" required>
                   </td>
                 </tr>
