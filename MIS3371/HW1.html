@@ -42,15 +42,15 @@ Description: HTML base of medical form webpage
               <tr>
                 <td>
                   <label for="firstname">First Name<span class="red">*</span></label>
-                  <input type="text" id="fname" name="firstname" maxlength="30" required>
+                  <input type="text" id="fname" name="firstname" minlength="1" maxlength="30" required>
                 </td>
                 <td>
                   <label for="lastname">Last Name<span class="red">*</span></label>
-                  <input type="text" id="lname" name="lastname" maxlength="30" required>
+                  <input type="text" id="lname" name="lastname" minlength="1" maxlength="30" required>
                 </td>
                 <td>
                   <label for="middleinitial">Middle Initial</label>
-                  <input type="text" id="middleinit" name="middleinit" maxlength="1">
+                  <input type="text" id="middleinit" name="middleinit" minlength="0" maxlength="1">
                 </td>
               </tr>
           </table>
