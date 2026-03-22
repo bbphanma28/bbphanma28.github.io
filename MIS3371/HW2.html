@@ -48,7 +48,7 @@ Description: HTML base of medical form webpage
                     minlength="1"
                     maxlength="30" 
                     pattern="[a-zA-Z']{1-30}"
-                    onblur="validateFname()"
+                    onblur="checkFname()"
                     required
                   >
                   <span class="error" id="fname-error"></span>
@@ -61,7 +61,7 @@ Description: HTML base of medical form webpage
                     minlength="1"
                     maxlength="30"
                     pattern="[a-zA-Z']{1-30}"
-                    onblur="validateLname()"
+                    onblur="checkLname()"
                     required
                   >
                   <span class="error" id="lname-error"></span>
@@ -74,7 +74,7 @@ Description: HTML base of medical form webpage
                     minlength="0"
                     maxlength="1"
                     pattern="[a-zA-Z']{0-1}"
-                    onblur="validateMname()"
+                    onblur="checkMname()"
                   >
                   <span class="error" id="mname-error"></span>
                 </td>
@@ -100,7 +100,7 @@ Description: HTML base of medical form webpage
                     id="SSN" 
                     minlength="9"
                     maxlength="11" 
-                    onblur="validateSsn()"
+                    onblur="checkSsn()"
                     required
                   >
                   <span class="error" id="ssn-error"></span>
@@ -110,7 +110,7 @@ Description: HTML base of medical form webpage
                   <input type="text" 
                     id="email" 
                     name="email" 
-                    onblur="validateEmail()"
+                    onblur="checkEmail()"
                     required
                   >
                   <span class="error" id="email-error"></span>
@@ -127,7 +127,7 @@ Description: HTML base of medical form webpage
                   name="city" 
                   minlength="1"
                   maxlength="30" 
-                  onblur="validateCity()"
+                  onblur="checkCity()"
                   required
                 >
                 <span class="error" id="city-error"></span>
@@ -197,7 +197,7 @@ Description: HTML base of medical form webpage
                   pattern="[0-9]{5}" 
                   size="5" 
                   maxlength="5"
-                  onblur="validateZip()"
+                  onblur="checkZip()"
                   required
                 >
                 <span class="error" id="zip-error"></span>
@@ -214,7 +214,7 @@ Description: HTML base of medical form webpage
                     name="address1" 
                     minlength="2"
                     maxlength="30" 
-                    onblur="validateAddress1()"
+                    onblur="checkAddress1()"
                     required
                   >
                   <span class="error" id="address1-error"></span>
@@ -348,9 +348,9 @@ Description: HTML base of medical form webpage
                        name="pass" 
                        minlength="8"
                        maxlength="30"
-                       onblur="validatePassword()"
-                       oninput="validatePassword()"
-                       onfocus="validatePassword()"
+                       onblur="checkPassword()"
+                       oninput="checkPassword()"
+                       onfocus="checkPassword()"
                        required
                       >
                      <span class="error" id="password1-error"></span>
@@ -362,9 +362,9 @@ Description: HTML base of medical form webpage
                     <input type="password" 
                       id="confirmpass" 
                       name="confirmpass" 
-                      onblur="confirmPass()"
-                      oninput="confirmPass()"
-                      onfocus="confirmPass()"                      
+                      onblur="checkPass()"
+                      oninput="checkPass()"
+                      onfocus="checkPass()"                      
                       required
                     >
                     <span class="error" id="confirmpass-error"></span>
@@ -382,6 +382,21 @@ Description: HTML base of medical form webpage
                 onclick="reviewInput()"
                 >
           </div>
+          <!-- Error Messages -->
+          <div class="error-message">
+            <span id="message1"></span>
+            <span id="message2"></span>
+            <span id="message3"></span>
+            <span id="message4"></span>
+            <span id="message5"></span>
+            <span id="message6"></span>
+            <span id="message7"></span>
+            <span id="message8"></span>
+          </div>
+          <!-- New -->
+          <center>
+            <p id="showInput"></p>
+          </center>
       </form>
       </div>
       
