@@ -9,7 +9,7 @@
 document.getElementById("today").innerHTML = new Date().toLocaleDateString(); 
 
 //Checking First Name
-function validateFname()
+function checkFname()
 {
  fname = getDocumentById("fname").value.trim();
  namePattern = /^[a-zA-Z-']+$/;
@@ -38,7 +38,7 @@ function validateFname()
 }
 
 //Checking Last Name
-function validateLname()
+function checkLname()
 {
  lname = getDocumentById("lname").value();
  namePattern = /^[a-zA-Z'2-5-]+$/;
@@ -67,7 +67,7 @@ function validateLname()
 }
 
 //Checking Middle Initial
-function validateMname()
+function checkMname()
 {
  mname = document.getElementById("mname").value;
  namePattern = /^[a-zA-Z]$/;
@@ -85,7 +85,7 @@ function validateMname()
 }
 
 //Checks Birthday of User
-function validateDob()
+function checkDob()
 {
  dob = document.getElementById("birthday");
  let date = new Date(dob.value);
@@ -107,3 +107,111 @@ function validateDob()
   return true;
  }
 }
+
+//Check SSN
+function checkSsn()
+{
+ ssn = document.getElementById("SSN").value;
+ ssnPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+
+ if (!ssnPattern.test(ssn)
+ {
+  document.getElementById("ssn-error").innerHTML = "Please enter a valid SSN number";
+  return false;
+ }
+ else
+ {
+  document.getElementById("ssn-error").innerHTML = ""
+  return true;
+ }
+}
+
+//Check Email
+function checkEmail()
+{
+ email = document.getElementById("email").value;
+ emailPattern = /^[^@\s]+@[^@\s]+.[^@\s]+$/; //DO AGAIN!
+
+ if (email == "")
+ {
+  document.getElementById("email-error").innerHTML = "Please enter your email";
+  return false;
+ }
+ else if (!email.match(emailPattern))
+ {
+  document.getElementById("email-error").innerHTML = "Email is invalid"
+  return false;
+ }
+ else 
+ {
+  document.getElementById("email-error").innerHTML = ""
+  return true;
+ }
+}
+
+//Check Address 1
+function checkAddress1()
+{
+ address1 = document.getElementId("address1").value;
+
+ if (address1 < 2)
+ {
+  document.getElementId("address1-error").innerHTML = "Address is too short";
+  return false
+ }
+ else if (address1 > 30)
+ {
+  document.getElementId("address1-error").innerHTML = "Address is too long";
+  return false;
+ }
+ else 
+ {
+  document.getElementId("address1-error").innerHTML = ""
+  return true;
+ }
+}
+
+//Check City
+function checkCity()
+{
+ city = document.getElementById("city").value.trim();
+
+ if(!city)
+ {
+  document.getElementById("city-error").innerHTML = "Please enter a city";
+  return false;
+ }
+ else
+ {
+  document.getElementbyId("city-error").innerHTML = "";
+  return true;
+ }
+}
+
+//Check Zipcode
+function checkZip()
+{
+ zipCode = document.getElementById("zip").value;
+ zipPattern = /^[0-9]{5}-?[0-9]{4}$/;
+
+ if (zipCode == "")
+ {
+  document.getElementById("zip-error").innerHTML = "Please Enter a Zip Code";
+  return false;
+ }
+ if (zip.length > 5)
+ {
+  zipCode = zipCode.slice(0.5) + "-" zipCode.slice(5,9);
+ }
+ else
+ {
+  zipCode = zipCode.slice(0,5);
+ }
+ if (zipCode != "")
+ {
+  document.getElementById("zip-error").innerHTML = "";
+  return true;
+ }
+}
+
+//
