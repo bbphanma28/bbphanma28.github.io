@@ -46,7 +46,8 @@ Description: HTML base of medical form webpage
                     name="firstname" 
                     id="fname"
                     minlength="1"
-                    maxlength="30" 
+                    maxlength="30"
+                    title="Enter First Name"
                     pattern="[a-zA-Z']{1-30}"
                     onblur="checkFname()"
                     required
@@ -60,6 +61,7 @@ Description: HTML base of medical form webpage
                     id="lname"
                     minlength="1"
                     maxlength="30"
+                    title="Enter Last Name"
                     pattern="[a-zA-Z']{1-30}"
                     onblur="checkLname()"
                     required
@@ -73,6 +75,7 @@ Description: HTML base of medical form webpage
                     id="middleinit" 
                     minlength="0"
                     maxlength="1"
+                    title="Enter Middle Initial"
                     pattern="[a-zA-Z']{0-1}"
                     onblur="checkMname()"
                   >
@@ -88,6 +91,7 @@ Description: HTML base of medical form webpage
                   <input type="date" 
                     name="birthday"
                     id="birthday" 
+                    title="Enter Date of Birth"
                     onblur="validateDob()"
                     required
                   >
@@ -98,6 +102,7 @@ Description: HTML base of medical form webpage
                   <input type="number" 
                     name="SSN"
                     id="SSN" 
+                    title="Enter Social Security Number"
                     minlength="9"
                     maxlength="11" 
                     onblur="checkSsn()"
@@ -110,6 +115,8 @@ Description: HTML base of medical form webpage
                   <input type="text" 
                     id="email" 
                     name="email" 
+                    title="Enter Email Address"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
                     onblur="checkEmail()"
                     required
                   >
@@ -125,6 +132,7 @@ Description: HTML base of medical form webpage
                 <input type="text" 
                   id="city" 
                   name="city" 
+                  title="Enter City"
                   minlength="1"
                   maxlength="30" 
                   onblur="checkCity()"
@@ -194,7 +202,8 @@ Description: HTML base of medical form webpage
                 <input type="text"  
                   name="zip"  
                   id="zip" 
-                  pattern="[0-9]{5}" 
+                  title="Enter Zip Code"
+                  pattern="^\d{5}(-\d{4})?$"
                   size="5" 
                   maxlength="5"
                   onblur="checkZip()"
@@ -211,7 +220,8 @@ Description: HTML base of medical form webpage
                   <label for="address1">Address 1<span class="red">*</span></label>
                   <input type="text" 
                     id="address1" 
-                    name="address1" 
+                    name="address1"
+                    title="Enter Address"
                     minlength="2"
                     maxlength="30" 
                     onblur="checkAddress1()"
@@ -331,10 +341,11 @@ Description: HTML base of medical form webpage
                      <label for="user">Username<span class="red">*</span></label>
                      <input type="text" 
                        id="username" 
-                       name="username" 
+                       name="username"
+                       title="Enter Desired Username"
                        minlength="5"
                        maxlength="30"
-                       onblur="validateUsername()"
+                       onblur="checkUsername()"
                        required
                       >
                      <span class="error" id="username-error"></span>
@@ -346,6 +357,7 @@ Description: HTML base of medical form webpage
                      <input type="password" 
                        id="pass" 
                        name="pass" 
+                       title="Enter Desired Password"
                        minlength="8"
                        maxlength="30"
                        onblur="checkPassword()"
@@ -362,6 +374,7 @@ Description: HTML base of medical form webpage
                     <input type="password" 
                       id="confirmpass" 
                       name="confirmpass" 
+                      title="Retype Desired Password"
                       onblur="checkPass()"
                       oninput="checkPass()"
                       onfocus="checkPass()"                      
