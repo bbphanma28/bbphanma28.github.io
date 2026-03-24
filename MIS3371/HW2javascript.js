@@ -22,7 +22,7 @@ function checkFname()
  else if(fname != "")
  {
   if(!fname.match(namePattern))
-   document.getElementById("fname-error").innerHTML = "Letters, dashes, apostrophes allowed only";
+   document.getElementById("fname-error").innerHTML = "Letters, dashes, and apostrophes are allowed only";
    return false;
  }
  else if(fname.length > 30)
@@ -130,7 +130,7 @@ function checkSsn()
 function checkEmail()
 {
  email = document.getElementById("email").value;
- emailPattern = /^[^@\s]+@[^@\s]+.[^@\s]+$/; //DO AGAIN!
+ emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
  if (email == "")
  {
@@ -192,9 +192,9 @@ function checkCity()
 function checkZip()
 {
  zipCode = document.getElementById("zip").value;
- zipPattern = /^[0-9]{5}-?[0-9]{4}$/;
+ let zip = zipCode.value.replace(/[^\d-]/g, "");
 
- if (zipCode == "")
+ if (!zip)
  {
   document.getElementById("zip-error").innerHTML = "Please Enter a Zip Code";
   return false;
@@ -207,11 +207,79 @@ function checkZip()
  {
   zipCode = zipCode.slice(0,5);
  }
- if (zipCode != "")
+ if (zipCode == "")
  {
   document.getElementById("zip-error").innerHTML = "";
   return true;
  }
 }
 
-//
+//Username Check
+function checkUsername()
+{
+ username = document.getElementById("username").value.toLowerCase;
+ document.getElementById("username") = username
+
+ if (username.length == 0)
+ {
+  document.getElementById("username-error").innerHTML = "Please Enter Desired Username";
+  return false;
+ }
+
+ if (!isNaN(username.charAt(0)))
+ {
+  document.getElementById("username-error").innerHTML = "Username cannot start with a number";
+  return false;
+ }
+
+ let userPattern = /^[a-zA-Z0-9_-]+$/;
+ if (!userPattern.test(username))
+ {
+  document.getElementById("username-error").innerHTML = "No special characters allowed";
+  return false;
+ }
+ else if (username.length < 5)
+ {
+  document.getElementById("username-error").innerHTML = "Username is too short";
+  return false;
+ }
+ else if (username.length > 30)
+ {
+  document.getElementById("username-error").innerHTML = "Username is too long";
+  return false;
+ }
+ else 
+ {
+  document.getElementById("username-error").innerHTML = "";
+  return true;
+ }
+}
+
+//Password Check
+function checkPassword()
+{
+ password = document.getElementById("password").value;
+ username = document.getElementById("username").value;
+ errorMessage = [];
+
+ if (!password.match(/[A-Z]/))
+ {
+  errorMessage.push("Enter at least one uppercase letter");
+ }
+ if (!password.match(/[a-z]/))
+ {
+  errorMessage.push("Enter at least one lowercase letter");
+ }
+ if (!password.match(/[0-9]/))
+ {
+  errorMessage.push("Enter at least one number");
+ }
+ if (!password.match(/[!\@#\$%&*\-_\\.+\(\)]/)) 
+ {
+  errorMessage.push("Enter at least one special character");
+ }
+ if (password == username || password.includes(username)) 
+ {
+  errorMessage.push("Password cannot contain username");
+ }
+}
