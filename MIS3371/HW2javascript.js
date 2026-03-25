@@ -19,8 +19,8 @@ function checkfirstname()
     }
     	else if (!x.match(namePattern))
         {
-        	document.getElementById("fname-error").innerHTML = "Invalid characters";
-          return false;
+         document.getElementById("fname-error").innerHTML = "Invalid characters";
+         return false;
         }
         	else if (x.length > 30)
             {
