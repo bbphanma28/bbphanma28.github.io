@@ -42,7 +42,7 @@ function checkfirstname()
 //Checking Last name
 function checklastname()
  {
- 	x = document.getElementById("lname").value.trim();
+  x = document.getElementById("lname").value.trim();
   lnamePattern = /^[a-zA-Z'2-5-]+$/;
     
   if (x == "")
