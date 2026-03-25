@@ -14,18 +14,18 @@ function checkfirstname()
     
     if (x == "")
     {
-    document.getElementById("fname-error").innerHTML = "Please enter first name"
-    return false;
+      document.getElementById("fname-error").innerHTML = "Please enter first name"
+      return false;
     }
     	else if (!x.match(fnamePattern))
         {
-         document.getElementById("fname-error").innerHTML = "Letters, apostrophes and dashes only";
-         return false;
+          document.getElementById("fname-error").innerHTML = "Letters, apostrophes and dashes only";
+          return false;
         }
         	else if (x.length > 30)
             {
-             document.getElementById("fname-error").innerHTML = "First name is too long";
-             return false;
+              document.getElementById("fname-error").innerHTML = "First name is too long";
+              return false;
             }
               else if (x.length < 2)
               {
@@ -34,7 +34,7 @@ function checkfirstname()
               }
               	else
                   {
-                  	document.getElementById("fname-error").innerHTML = ""
+                    document.getElementById("fname-error").innerHTML = ""
                     return true;
                   }
  }
@@ -45,15 +45,15 @@ function checklastname()
  	x = document.getElementById("lname").value.trim();
   lnamePattern = /^[a-zA-Z'2-5-]+$/;
     
-    if (x == "")
+  if (x == "")
     {
-    document.getElementById("lname-error").innerHTML = "Last name cannot be empty"
-    return false;
+     document.getElementById("lname-error").innerHTML = "Last name cannot be empty"
+     return false;
     }
-    	else if (!x.match(namePattern))
+    	else if (!x.match(lnamePattern))
         {
-        	document.getElementById("lname-error").innerHTML = "Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only";
-            return false;
+         document.getElementById("lname-error").innerHTML = "Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only";
+         return false;
         }
         	else if (x.length > 30)
             {
@@ -71,5 +71,11 @@ function checklastname()
                     return true;
                   }
  }
+
+//Check Date of Birth
+function checkdob()
+{
+ 
+}
 
 
