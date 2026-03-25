@@ -24,8 +24,8 @@ function checkfirstname()
         }
         	else if (x.length > 30)
             {
-            	document.getElementById("fname-error").innerHTML = "Name is too long";
-              return false;
+             document.getElementById("fname-error").innerHTML = "Name is too long";
+             return false;
             }
               else if (x.length < 2)
               {
