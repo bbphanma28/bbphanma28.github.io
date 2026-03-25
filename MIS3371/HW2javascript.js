@@ -50,11 +50,11 @@ if (x == "")
    document.getElementById("lname-error").innerHTML = "Last name cannot be empty"
    return false;
   }
-   else if (!x.match(lnamePattern))
-   {
-    document.getElementById("lname-error").innerHTML = "Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only";
-    return false;
-   }
+    else if (!x.match(lnamePattern))
+    {
+     document.getElementById("lname-error").innerHTML = "Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only";
+     return false;
+    }
       else if (x.length > 30)
       {
        document.getElementById("lname-error").innerHTML = "Last name is too long";
@@ -83,16 +83,16 @@ function checkmiddle()
   document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
   return false;
  }
-  else if (x.length > 1)
-  {
-   document.getElementById("middle-error").innerHTML = "Only 1 letter is allowed";
-   return false;
-  }
-   else 
+   else if (x.length > 1)
    {
-    document.getElementById("middle-error").innerHTML = "";
-    return true;
+    document.getElementById("middle-error").innerHTML = "Only 1 letter is allowed";
+    return false;
    }
+     else 
+     {
+      document.getElementById("middle-error").innerHTML = "";
+      return true;
+     }
 }
 //Check Date of Birth
 function checkdob()
