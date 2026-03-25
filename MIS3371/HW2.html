@@ -423,12 +423,7 @@ Description: HTML base of medical form webpage
     <script src="HW2javacript.js"></script>
       
     <script>
-    document.getElementById("today").innerHTML = new Date().toLocaleDateString();       
-    var slider = document.getElementById("healthslider");
-    var output = document.getElementById("scale");
-    output.innerHTML = slider.value;
-    slider.oninput = function() {
-      output.innerHTML = this.value; }
+    document.getElementById("today").innerHTML = new Date().toLocaleDateString(); 
     </script>
     </body>
 </html>
