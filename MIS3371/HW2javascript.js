@@ -72,6 +72,28 @@ function checklastname()
                   }
  }
 
+//Check Middle Initial 
+function checkmiddle()
+{
+ x = document.getElementById("middleinit".value.trim();
+ mnamePattern = /[a-zA-Z]/;
+
+ if (!x.match(mnamePattern))
+ {
+  document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
+  return false;
+ }
+  else if (x.length > 1)
+  {
+   document.getElementById("middle-error").innerHTML = "Only 1 letter is allowed";
+   return false;
+  }
+   else 
+   {
+    document.getElementById("middle-error").innerHTML = "";
+    return true;
+   }
+}
 //Check Date of Birth
 function checkdob()
 {
