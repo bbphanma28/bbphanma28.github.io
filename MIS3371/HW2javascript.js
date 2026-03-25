@@ -9,8 +9,8 @@
 //Checking First Name
 function checkfirstname()
 {
-  x = document.getElementById("fname").value.trim();
-  fnamePattern = /^[a-zA-Z'-]+$/;
+ x = document.getElementById("fname").value.trim();
+ fnamePattern = /^[a-zA-Z'-]+$/;
     
     if (x == "")
     {
