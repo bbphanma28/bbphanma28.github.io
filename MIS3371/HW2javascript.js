@@ -10,14 +10,14 @@
 function checkfirstname()
 {
   x = document.getElementById("fname").value.trim();
-  namePattern = /^[a-zA-Z'-]+$/;
+  fnamePattern = /^[a-zA-Z'-]+$/;
     
     if (x == "")
     {
     document.getElementById("fname-error").innerHTML = "Please enter first name"
     return false;
     }
-    	else if (!x.match(namePattern))
+    	else if (!x.match(fnamePattern))
         {
          document.getElementById("fname-error").innerHTML = "Invalid characters";
          return false;
