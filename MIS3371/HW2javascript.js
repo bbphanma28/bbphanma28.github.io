@@ -7,14 +7,14 @@
 */
 
 //Checking First Name
-function checkFname()
+function checkfirstname()
 {
  	x = document.getElementById("fname").value.trim();
   namePattern = /^[a-zA-Z'-]+$/;
     
     if (x == "")
     {
-    document.getElementById("fname-error").innerHTML = "First name cannot be empty"
+    document.getElementById("fname-error").innerHTML = "Please enter first name"
     return false;
     }
     	else if (!x.match(namePattern))
@@ -24,12 +24,12 @@ function checkFname()
         }
         	else if (x.length > 30)
             {
-            	document.getElementById("fname-error").innerHTML = "Too long";
+            	document.getElementById("fname-error").innerHTML = "Name is too long";
               return false;
             }
               else if (x.length < 2)
               {
-                document.getElementById("fname-error").innerHTML = "Too Short";
+                document.getElementById("fname-error").innerHTML = "Name is too short";
                 return false;
               }
               	else
