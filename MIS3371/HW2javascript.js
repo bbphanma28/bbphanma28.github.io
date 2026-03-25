@@ -11,24 +11,26 @@ document.getElementById("today").innerHTML = new Date().toLocaleDateString();
 //Checking First Name
 function checkFname()
 {
- fname = getDocumentById("fname").value.trim();
- namePattern = /^[a-zA-Z-']+$/;
- 
- if (fname == "")
- {
-  document.getElementById("fname-error").innerHTML = "Please Enter First Name";
-  return false;
- }
- else if(fname != "")
- {
-  if(!fname.match(namePattern))
-   document.getElementById("fname-error").innerHTML = "Letters, dashes, and apostrophes are allowed only";
-   return false;
- }
- else if(fname.length > 30)
- {
-  document.getElementById("fname-error").innerHTML = "Name is too long";
-  return false;
+ x = getDocumentById("fname").value();
+   if (x == "")
+   {
+    document.getElementById("fname-error").innerHTML = "Please Enter First Name";
+    return false;
+   }
+     else if(x.length > 30)
+     {
+      document.getElementById("fname-error").innerHTML = "Name is too long";
+      return false;
+     }
+       else if (x.match(/[a-zA-Z3-5'-]+$/)) 
+       {
+        document.getElementById("name_message").innerHTML = "";  
+       }
+         else 
+         {
+          document.getElementById("name_message").innerHTML = "Invalid characters in name";
+          return false;
+         }
  }
  else 
  {
