@@ -97,7 +97,25 @@ function checkmiddle()
 //Check Date of Birth
 function checkdob()
 {
- 
+ x = document.getElementById("birthday");
+ currentYear = new Date(x.value);
+ maxYear = new Date().setFullYear(new Date().getFullYear() - 120);
+
+ if (currentYear > new Date())
+ {
+  document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the future";
+  return false;
+ }
+   else if (currentYear < new Date())
+   {
+    document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the past";
+    return false;
+   }
+     else
+     {
+      document.getElementById("dob-error").innerHTML = "";
+      return true;
+     }
 }
 
 
