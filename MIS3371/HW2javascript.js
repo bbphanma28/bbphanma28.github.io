@@ -119,4 +119,28 @@ function checkdob()
      }
 }
 
+//Checking SSN
+function checkssn()
+{
+ x = document.getElementById("SSN").value;
+ sPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+
+ if (!x.match(sPattern))
+ {
+  document.getElementById("ssn-error").innerHTML = "Invalid SSN";
+  return false;
+ }
+   else
+   {
+    document.getElementById("ssn-error").innerHTML = "";
+    return true;
+   }
+}
+
+/*Check Zip Code
+function checkzip()
+{
+ x = document.getElementById("zip").value;
+ zipFive = x.slice(0,5);
+}
 
