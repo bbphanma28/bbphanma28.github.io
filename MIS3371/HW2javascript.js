@@ -83,16 +83,11 @@ function checkmiddle()
   document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
   return false;
  }
-   else if (x.length > 1)
+   else 
    {
-    document.getElementById("middle-error").innerHTML = "Only 1 letter is allowed";
-    return false;
+    document.getElementById("middle-error").innerHTML = "";
+    return true;
    }
-     else 
-     {
-      document.getElementById("middle-error").innerHTML = "";
-      return true;
-     }
 }
 
 // Check Date of Birth
