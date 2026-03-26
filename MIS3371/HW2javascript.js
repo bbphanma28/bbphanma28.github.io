@@ -75,7 +75,7 @@ if (x == "")
 //Check Middle Initial 
 function checkmiddle()
 {
- x = document.getElementById("middleinit".value.trim();
+ x = document.getElementById("middleinit").value.trim();
  mnamePattern = /[a-zA-Z]/;
 
  if (!x.match(mnamePattern))
@@ -94,7 +94,8 @@ function checkmiddle()
       return true;
      }
 }
-//Check Date of Birth
+
+// Check Date of Birth
 function checkdob()
 {
  x = document.getElementById("birthday");
