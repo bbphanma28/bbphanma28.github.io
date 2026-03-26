@@ -75,9 +75,14 @@ if (x == "")
 //Check Middle Initial 
 function checkmiddle()
 {
- x = document.getElementById("middleinit").value.trim();
- mnamePattern = /[a-zA-Z]/;
+ x = document.getElementById("middleinit").value;
+ mnamePattern = /^[a-zA-Z]$/;
 
+ if (x == "")
+ {
+  document.getElementById("middle-error").innerHTML = "";
+  return true;
+ }
  if (!x.match(mnamePattern))
  {
   document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
