@@ -107,7 +107,7 @@ function checkdob()
   document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the future";
   return false;
  }
-   else if (currentYear < new Date())
+   else if (currentYear < new Date(maxYear))
    {
     document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the past";
     return false;
