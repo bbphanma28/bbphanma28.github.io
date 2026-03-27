@@ -125,22 +125,82 @@ function checkssn()
  x = document.getElementById("SSN").value;
  sPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
 
- if (!x.match(sPattern))
+ if (x == "")
  {
-  document.getElementById("ssn-error").innerHTML = "Invalid SSN";
+  document.getElementById("ssn-error").innerHTML = "Please enter your SSN";
   return false;
  }
-   else
+   else if (!x.match(sPattern))
    {
-    document.getElementById("ssn-error").innerHTML = "";
-    return true;
+    document.getElementById("ssn-error").innerHTML = "Invalid SSN";
+    return false;
    }
+     else
+     {
+      document.getElementById("ssn-error").innerHTML = "";
+      return true;
+     }
 }
 
-/*Check Zip Code
+//Check City
+function checkcity()
+{
+ x = document.getElementById("city").value.trim();
+ cityPattern = /^[a-zA-Z]+$/;
+
+ if (x == "")
+ {
+  document.getElementById("city-error").innerHTML = "Please enter a City";
+  return false;
+ }
+   else if (!x.match(cityPattern))
+   {
+    document.getElementById("city-error").innerHTML = "Letters allowed only";
+    return false;
+   }
+     else if (x.length < 2)
+     {
+      document.getElementById("city-error").innerHTML = "City name is too short";
+      return false;
+     }
+       else if (x.length > 30)
+       {
+        document.getElementById("city-error").innerHTML = "City name is too long";
+        return false;
+       }
+         else
+         {
+          document.getElementById("city-error").innerHTML = ""
+          return true;
+         }
+}
+//Check Zip Code
 function checkzip()
 {
  x = document.getElementById("zip").value;
- zipFive = x.slice(0,5);
+ zipEdit = x.value.replace(/\D/g, "");
+
+ if (!zipEdit)
+ {
+  document.getElementById("zip-error").innerHTML = "Please enter zip code without any letters or leaving it blank";
+  return false;
+ }
+   else if (zipEdit.length < 5)
+   {
+    document.getElementIdBy("zip-error").innerHTML = "Zip code cannot be less than 5 numbers";
+    return false;
+   }
+     else if (zipEdit.length > 5)
+     {
+      zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
+     }
+       else 
+       {
+        zipEdit = zipEdit(0 ,5);
+       }
+
+   x.value = zipEdit;
+   document.getElementById("zip-error").innerHTML = "";
+   return true;
 }
 
