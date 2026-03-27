@@ -198,6 +198,23 @@ function checkcity()
          }
 }
 
+//Check State
+function checkstate()
+{
+ x = document.getElementById("state").value;
+
+ if (x == "")
+ {
+  document.getElementById("state-error").innerHTML = "Please choose a state";
+  return false;
+ }
+  else 
+  {
+   document.getElementById("state-error").innerHTML = ""
+   return true;
+  }
+}
+
 //Check Zip Code
 function checkzip()
 {
