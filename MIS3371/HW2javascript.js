@@ -177,7 +177,7 @@ function checkcity()
 //Check Zip Code
 function checkzip()
 {
- x = document.getElementById("zip").value;
+ x = document.getElementById("zip");
  zipEdit = x.value.replace(/\D/g, "");
 
  if (!zipEdit)
