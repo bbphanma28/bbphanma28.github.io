@@ -178,17 +178,22 @@ function checkcity()
 //Check Zip Code
 function checkzip()
 {
-    x = document.getElementById("zip");
-    zipEdit = x.value.replace(/\D/g, "");
+  x = document.getElementById("zip");
+  zipEdit = x.value.replace(/\D/g, "");
 
-    if (!zipEdit) 
+  if (zipEdit.length == 5)
+  {
+   document.getElementById("zip-error").innerHTML = "";
+   return true;
+  }
+    else if (!zipEdit) 
     {
      document.getElementById("zip-error").innerHTML = "Please enter zip code with only numbers";
      return false;
     }
-      else if (zipEdit.length < 5)
+      else if (zipEdit.length < 5 || zipEdit.length < 9)
       {
-       document.getElementById("zip-error").innerHTML = "Zip code cannot be less than 5";
+       document.getElementById("zip-error").innerHTML = "Zip code needs to be exactly 5 or 9 numbers";
        return false;
       }
         else if (zipEdit.length > 5) 
@@ -199,9 +204,9 @@ function checkzip()
           {
            zipEdit = zipEdit.slice(0, 5);
           }
-          
-        x.value = zipEdit;
-        document.getElementById("zip-error").innerHTML = "";
-        return true;
+         
+       x.value = zipEdit;
+       document.getElementById("zip-error").innerHTML = "";
+       return true;
 }
 
