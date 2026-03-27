@@ -43,7 +43,7 @@ function checkfirstname()
 function checklastname()
  {
   x = document.getElementById("lname").value.trim();
-  lnamePattern = /^[a-zA-Z'2-5-]+$/;
+  lnamePattern = /^[a-zA-Z'2-5- ]+$/;
     
 if (x == "")
   {
@@ -169,7 +169,7 @@ function checkemail()
 function checkcity()
 {
  x = document.getElementById("city").value.trim();
- cityPattern = /^[a-zA-Z]+$/;
+ cityPattern = /^[a-zA-Z ]+$/;
 
  if (x == "")
  {
@@ -254,7 +254,7 @@ function checkzip()
 function checkaddress1()
 {
  x = document.getElementById("address1").value.trim();
- addressPattern = /^[a-zA-Z0-9]+$/;
+ addressPattern = /^[a-zA-Z0-9 ]+$/;
 
  if (x == "")
  {
@@ -287,7 +287,7 @@ function checkaddress1()
 function checkaddress2()
 {
  x = document.getElementById("address2").value.trim();
- addressPattern = /^[a-zA-Z0-9]+$/;
+ addressPattern = /^[a-zA-Z0-9 ]+$/;
 
  if (x == "")
  {
