@@ -174,33 +174,37 @@ function checkcity()
           return true;
          }
 }
+
 //Check Zip Code
 function checkzip()
 {
- x = document.getElementById("zip");
- zipEdit = x.value.replace(/\D/g, "");
+    x = document.getElementById("zip");
+    zipEdit = x.value.replace(/\D/g, "");
 
- if (!zipEdit)
- {
-  document.getElementById("zip-error").innerHTML = "Please enter zip code without any letters or leaving it blank";
-  return false;
- }
-   else if (zipEdit.length < 5)
-   {
-    document.getElementIdBy("zip-error").innerHTML = "Zip code cannot be less than 5 numbers";
+    if (!zipEdit) 
+    {
+        document.getElementById("zip-error").innerHTML = 
+        "Zip code can't be blank nor have letters";
+        return false;
+    }
+    
+    else if (zipEdit.length < 5)
+    {
+    document.getElementById("zip-error").innerHTML = "Less than 5";
     return false;
-   }
-     else if (zipEdit.length > 5)
-     {
-      zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
-     }
-       else 
-       {
-        zipEdit = zipEdit(0, 5);
-       }
-
-     x.value = zipEdit;
-     document.getElementById("zip-error").innerHTML = "";
-     return true;
+    }
+    
+    else if (zipEdit.length > 5) {
+        zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
+    }
+    
+    else 
+    {
+        zipEdit = zipEdit.slice(0, 5);
+    }
+    
+    x.value = zipEdit;
+    document.getElementById("zip-error").innerHTML = "";
+    return true;
 }
 
