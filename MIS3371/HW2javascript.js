@@ -199,8 +199,8 @@ function checkzip()
         zipEdit = zipEdit(0, 5);
        }
 
-   x.value = zipEdit;
-   document.getElementById("zip-error").innerHTML = "";
-   return true;
+     x.value = zipEdit;
+     document.getElementById("zip-error").innerHTML = "";
+     return true;
 }
 
