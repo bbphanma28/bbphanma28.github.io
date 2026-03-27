@@ -183,28 +183,25 @@ function checkzip()
 
     if (!zipEdit) 
     {
-        document.getElementById("zip-error").innerHTML = 
-        "Zip code can't be blank nor have letters";
-        return false;
+     document.getElementById("zip-error").innerHTML = "Please enter zip code with only numbers";
+     return false;
     }
-    
-    else if (zipEdit.length < 5)
-    {
-    document.getElementById("zip-error").innerHTML = "Less than 5";
-    return false;
-    }
-    
-    else if (zipEdit.length > 5) {
-        zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
-    }
-    
-    else 
-    {
-        zipEdit = zipEdit.slice(0, 5);
-    }
-    
-    x.value = zipEdit;
-    document.getElementById("zip-error").innerHTML = "";
-    return true;
+      else if (zipEdit.length < 5)
+      {
+       document.getElementById("zip-error").innerHTML = "Zip code cannot be less than 5";
+       return false;
+      }
+        else if (zipEdit.length > 5) 
+        {
+         zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
+        }
+          else 
+          {
+           zipEdit = zipEdit.slice(0, 5);
+          }
+          
+        x.value = zipEdit;
+        document.getElementById("zip-error").innerHTML = "";
+        return true;
 }
 
