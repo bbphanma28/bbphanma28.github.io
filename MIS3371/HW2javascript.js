@@ -196,7 +196,7 @@ function checkzip()
      }
        else 
        {
-        zipEdit = zipEdit(0 ,5);
+        zipEdit = zipEdit(0, 5);
        }
 
    x.value = zipEdit;
