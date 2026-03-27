@@ -22,21 +22,21 @@ function checkfirstname()
        document.getElementById("fname-error").innerHTML = "Letters, apostrophes and dashes only";
        return false;
       }
-        	else if (x.length > 30)
-         {
-          document.getElementById("fname-error").innerHTML = "First name is too long";
-          return false;
-         }
-           else if (x.length < 2)
-           {
-            document.getElementById("fname-error").innerHTML = "First name is too short";
-            return false;
-           }
-             else
-             {
-              document.getElementById("fname-error").innerHTML = ""
-              return true;
-             }
+        else if (x.length > 30)
+        {
+         document.getElementById("fname-error").innerHTML = "First name is too long";
+         return false;
+        }
+          else if (x.length < 2)
+          {
+           document.getElementById("fname-error").innerHTML = "First name is too short";
+           return false;
+          }
+            else
+            {
+             document.getElementById("fname-error").innerHTML = ""
+             return true;
+            }
  }
 
 //Checking Last name
@@ -231,5 +231,66 @@ function checkzip()
        x.value = zipEdit;
        document.getElementById("zip-error").innerHTML = "";
        return true;
+}
+
+//Check Address 1
+function checkaddress1()
+{
+ x = document.getElementById("address1").value.trim();
+ addressPattern = /^[a-zA-Z0-9]+$/;
+
+ if (x == "")
+ {
+  document.getElementById("address1-error").innerHTML = "Please enter an address";
+  return false;
+ }
+   else if (!x.match(addressPattern))
+   {
+    document.getElementById("address1-error").innerHTML = "Only letters and numbers allowed";
+    return false;
+   }
+     else if (x.length < 2)
+     {
+      document.getElementById("address1-error").innerHTML = "Address is too short";
+      return false;
+     }
+       else if (x.length > 30)
+       {
+        document.getElementById("address1-error").innerHTML = "Address is too long";
+        return false;
+       }
+         else 
+         {
+          document.getElementById("address1-error").innerHTML = "";
+          return true;
+         }
+}
+
+//Check Address 2
+function checkaddress2()
+{
+ x = document.getElementById("address2").value.trim();
+ addressPattern = /^[a-zA-Z0-9]+$/;
+
+ if (!x.match(addressPattern))
+ {
+  document.getElementById("address2-error").innerHTML = "Only letters and numbers allowed";
+  return false;
+ }
+   else if (x.length < 2)
+   {
+    document.getElementById("address2-error").innerHTML = "Address is too short";
+    return false;
+   }
+     else if (x.length > 30)
+     {
+      document.getElementById("address2-error").innerHTML = "Address is too long";
+      return false;
+     }
+       else 
+       {
+        document.getElementById("address2-error").innerHTML = "";
+        return true;
+       }
 }
 
