@@ -233,7 +233,15 @@ Description: HTML base of medical form webpage
               <tr>
                 <td>
                   <label for="address2">Address 2</label>
-                  <input type="text" id="address2" name="address2" maxlength="30">
+                  <input type="text" 
+                    id="address2" 
+                    name="address2"
+                    title="Enter Address 2"
+                    minlength="2"
+                    maxlength="30"
+                    onblur="checkaddress2()"
+                  >
+                  <span class="error" id="address2-error"></span>
                 </td>
               </tr>
           </table>
