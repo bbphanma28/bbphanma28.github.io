@@ -272,6 +272,12 @@ function checkaddress2()
  x = document.getElementById("address2").value.trim();
  addressPattern = /^[a-zA-Z0-9]+$/;
 
+ if (x == "")
+ {
+  document.getElementById("address2-error").innerHTML = "";
+  return true;
+ }
+ 
  if (!x.match(addressPattern))
  {
   document.getElementById("address2-error").innerHTML = "Only letters and numbers allowed";
