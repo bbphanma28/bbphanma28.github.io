@@ -142,6 +142,29 @@ function checkssn()
      }
 }
 
+//Check Email
+function checkemail()
+{
+ x = document.getElementById("email").value;
+ emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+ if (x == "")
+ {
+  document.getElementById("email-error").innerHTML = "Please enter an email";
+  return false;
+ }
+   else if (!x.match(emailPattern))
+   {
+    document.getElementById("email-error").innerHTML = "Email is invalid";
+    return false;
+   }
+     else
+     {
+      document.getElementById("email-error").innerHTML = "";
+      return true;
+     }
+}
+
 //Check City
 function checkcity()
 {
