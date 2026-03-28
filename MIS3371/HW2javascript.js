@@ -329,9 +329,9 @@ function username()
    document.getElementById("username-error").innerHTML = "Please enter a username";
    return false;
   }
-  else if (!isNaN(x.charAt(0)))
+  else if (x.match(/[0-9]/))
   {
-   document.getElementById("username-error").innerHTML = "Username can only be started with a letter, underscore, or a dash";
+   document.getElementById("username-error").innerHTML = "Username cannot be started with a number";
    return false;
   }
   else if (!x.match(userPattern))
@@ -357,4 +357,54 @@ function username()
 }
 
 //Check Password 
-function 
+function checkpassword()
+{
+ x = document.getElementById("pass").value;
+ y = document.getElementById("username").value;
+
+  if (x == "")
+  {
+   document.getElementById("password1-error").innerHTML = "Please enter a password";
+   return false;
+  }
+  else if (x.length < 8)
+  {
+   document.getElementById("password1-error").innerHTML = "Password is too short";
+   return false;
+  }
+  else if (x.length > 30)
+  {
+   document.getElementById("password1-error").innerHTML = "Password is too long";
+   return false;
+  }
+  else if ( x == y || x.includes(y))
+  {
+  document.getElementById("password1-error").innerHTML = "Password cannot contain username";
+  return false;
+  }
+ else 
+ {
+ document.getElementById("password1-error").innerHTML = "";
+ return true;
+ }
+}
+
+//Confirming password
+ function checkpass2()
+ {
+  x = document.getElementById("pass").value;
+  y = document.getElementById("confirmpass").value;
+
+   if (x !== y) 
+   {
+    document.getElementById("confirmpass-error").innerHTML = 
+    "Passwords don't match";
+    return false;
+   } 
+   else 
+   {
+    document.getElementById("confirmpass-error").innerHTML = 
+    "Passwords match";
+    return true;
+   }
+}
