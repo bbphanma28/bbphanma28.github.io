@@ -319,7 +319,7 @@ function checkaddress2()
 }
 
 //Check Username
-function username()
+function checkusername()
 {
  x = document.getElementById("username").value.toLowerCase();
  userPattern = /^[a-zA-Z0-9_-]+$/;
