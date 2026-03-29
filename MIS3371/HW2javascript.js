@@ -329,7 +329,7 @@ function checkusername()
    document.getElementById("username-error").innerHTML = "Please enter a username";
    return false;
   }
-  else if (x.match(/[0-9]/))
+  else if (!isNaN(x.charAt(0)))
   {
    document.getElementById("username-error").innerHTML = "Username cannot be started with a number";
    return false;
