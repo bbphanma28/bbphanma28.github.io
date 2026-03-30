@@ -378,7 +378,7 @@ function checkpassword()
  }
   else 
   {
-   output = ""
+   output = "";
   }
    document.getElementById("pass-message2") = output;
 
