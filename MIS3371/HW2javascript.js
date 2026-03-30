@@ -359,35 +359,70 @@ function checkusername()
 //Check Password 
 function checkpassword()
 {
- x = document.getElementById("pass").value;
- y = document.getElementById("username").value;
+ var output;
+ var input = document.getElementById("pass").value;
 
-  if (x == "")
+ if (input.length > 8)
+ {
+  output = "Password is too short";
+ }
+  else 
   {
-   document.getElementById("password1-error").innerHTML = "Please enter a password";
-   return false;
+   output = "";
   }
-  else if (x.length < 8)
+   document.getElementById("pass-message1") = output;
+
+ if (input.length < 30)
+ {
+  output = "Password is too long";
+ }
+  else 
   {
-   document.getElementById("password1-error").innerHTML = "Password is too short";
-   return false;
+   output = ""
   }
-  else if (x.length > 30)
+   document.getElementById("pass-message2") = output;
+
+ if (input.search(/[a-z]/) < 0)
+ {
+  output = "Enter at least 1 lower case letter";
+ }
+  else 
   {
-   document.getElementById("password1-error").innerHTML = "Password is too long";
-   return false;
+   output = "";
   }
-  else if ( x == y || x.includes(y))
+   document.getElementById("pass-message3").innerHTML = output;
+ 
+ if (input.search(/[A-Z]/) < 0) 
+ {
+  output = "Enter at least 1 upper case letter";
+ }
+  else 
   {
-  document.getElementById("password1-error").innerHTML = "Password cannot contain username";
-  return false;
+   output = "";
   }
+   document.getElementById("pass-message4").innerHTML = output;
+
+if (input.search(/[0-9]/) < 0)
+{
+ output = "Enter at least 1 number";
+}
  else 
  {
- document.getElementById("password1-error").innerHTML = "";
- return true;
+  output = "";
  }
-}
+  document.getElementById("pass-message5").innerHTML = output;
+
+ if (input.search(/[!\@#\$%&*\-_\\.+\(\)]/) < 0)
+ {
+  output = "Enter at least 1 special character";
+ }
+  else 
+  {
+   output = "";
+  }
+   document.getElementById("pass-message6").innerHTML = output;
+
+
 
 //Confirming password
  function checkpass2()
