@@ -440,7 +440,7 @@ function checkpassword()
   x = document.getElementById("pass").value;
   y = document.getElementById("confirmpass").value;
 
-   if (x !== y) 
+   if (x != y) 
    {
     document.getElementById("confirmpass-error").innerHTML = 
     "Passwords don't match";
