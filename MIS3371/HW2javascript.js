@@ -80,6 +80,7 @@ function checkmiddle()
   if (x == "")
   {
    document.getElementById("middle-error").innerHTML = "";
+   return true;
   }
   if (!x.match(mnamePattern))
   {
@@ -241,6 +242,7 @@ function checkzip()
      
    x.value = zipEdit;
    document.getElementById("zip-error").innerHTML = "";
+   return true;
 }
 
 //Check Address 1
@@ -284,6 +286,7 @@ function checkaddress2()
   if (x == "")
   {
    document.getElementById("address2-error").innerHTML = "";
+   return true;
   }
   
   if (!x.match(addressPattern))
@@ -397,27 +400,29 @@ function checkpassword()
 }
 
 function reviewInput() 
-      {
-        error_flag = "0";
-        checkfirstname();
-        checkmiddle();
-        checklastname();
-       checkdob();
-       checkssn();
-       checkemail();
-       checkcity();
-       checkstate();
-       checkzip();
-        checkaddress1();
-        checkaddress2();
-        checkusername();
-        checkpassword();
-       checkpass2();
-        if (error_flag == "1")
-        {
-          alert("Please fix the indicated errors!");
-        }
-        else {
-          document.getElementById("submit").disabled = false;
-        }
-      }
+{
+ error_flag = "0";
+ checkfirstname();
+ checkmiddle();
+ checklastname();
+ checkdob();
+ checkssn();
+ checkemail();
+ checkcity();
+ checkstate();
+ checkzip();
+ checkaddress1();
+ checkaddress2();
+ checkusername();
+ checkpassword();
+ checkpass2();
+ 
+  if (error_flag == "1")
+  {
+    alert("Please fix the indicated errors!");
+  }
+  else 
+  {
+    document.getElementById("submit").disabled = false;
+  }
+}
