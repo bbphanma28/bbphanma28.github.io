@@ -375,7 +375,7 @@ function checkpassword()
  
   if (x.length > 30)
   {
-   document.getElementById("pass-message3).innerHTML = "Password is too long";
+   document.getElementById("pass-message3").innerHTML = "Password is too long";
    error_flag = 1;
   }
    else
@@ -425,7 +425,7 @@ function checkpassword()
 
   if ( x == y || x.includes(y))
   {
-  document.getElementById("pass-message8).innerHTML = "Password cannot contain username";
+  document.getElementById("pass-message8").innerHTML = "Password cannot contain username";
   error_flag = 1;
   }
    else 
