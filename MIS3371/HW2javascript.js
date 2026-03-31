@@ -2,10 +2,11 @@
  Name: Breanna Phanmaha
  File: HW2javascript.js
  Date Created: 03-09-2026
- Date Updated: 3/27/2026
+ Date Updated: 3-27-2026
  Purpose: Validates/checks important fields 
 */
 
+//assigning a value to variable error_flag
 var error_flag = 0;
 
 //Checking First Name
@@ -354,28 +355,83 @@ function checkpassword()
 
   if (x == "")
   {
-   document.getElementById("password1-error").innerHTML = "Please enter a password";
+   document.getElementById("pass-message1").innerHTML = "Please enter a password";
    error_flag = 1;
   }
-  else if (x.length < 8)
+   else 
+   {
+    document.getElementById("pass-message1").innerHTML = "";
+   }
+ 
+  if (x.length < 8)
   {
-   document.getElementById("password1-error").innerHTML = "Password is too short";
+   document.getElementById("pass-message2").innerHTML = "Password is too short";
    error_flag = 1;
   }
-  else if (x.length > 30)
+   else
+   {
+    document.getElementById("pass-message2").innerHTML = "";
+   }
+ 
+  if (x.length > 30)
   {
-   document.getElementById("password1-error").innerHTML = "Password is too long";
+   document.getElementById("pass-message3).innerHTML = "Password is too long";
    error_flag = 1;
   }
-  else if ( x == y || x.includes(y))
+   else
+   {
+    document.getElementById("pass-message3").innerHTML = "";
+   }
+ 
+  if (x.search(/[a-z]/) < 0)
   {
-  document.getElementById("password1-error").innerHTML = "Password cannot contain username";
+   document.getElementById("pass-message4").innerHTML = "Enter at least one lower case letter";
+   error_flag = 1;
+  }
+   else
+   {
+    document.getElementById("pass-message4").innerHTML = "";
+   }
+
+  if (x.search(/[A-Z]/) < 0)
+  {
+   document.getElementById("pass-message5").innerHTML = "Enter at least one upper case letter";
+   error_flag = 1;
+  }
+   else
+   {
+    document.getElementById("pass-message5").innerHTML = "";
+   }
+
+  if (x.search(/[0-9]/) < 0)
+  {
+   document.getElementById("pass-message6").innerHTML = "Enter at least 1 number";
+   error_flag = 1;
+  }
+   else
+   {
+    document.getElementById("pass-message6").innerHTML = "";
+   }
+
+  if (x.search(/[!@#$%&*\-_\\.+()]/) < 0)
+  {
+   document.getElementById("pass-message7").innerHTML = "Enter at least 1 special character excluding quotes";
+   error_flag = 1;
+  }
+   else 
+   {
+    document.getElementById("pass-message7").innerHTML = "";
+   }
+
+  if ( x == y || x.includes(y))
+  {
+  document.getElementById("pass-message8).innerHTML = "Password cannot contain username";
   error_flag = 1;
   }
- else 
- {
- document.getElementById("password1-error").innerHTML = "";
- }
+   else 
+   {
+   document.getElementById("pass-message8").innerHTML = "";
+   }
 }
 
 //Confirming password
