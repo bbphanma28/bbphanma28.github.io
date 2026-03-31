@@ -421,6 +421,7 @@ if (input.search(/[0-9]/) < 0)
    output = "";
   }
    document.getElementById("pass-message6").innerHTML = output;
+}
 
 
 
