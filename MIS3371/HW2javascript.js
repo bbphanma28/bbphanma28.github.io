@@ -402,7 +402,7 @@ function checkpassword()
 
 function reviewInput() 
 {
- error_flag = "0";
+ error_flag = 0;
  checkfirstname();
  checkmiddle();
  checklastname();
@@ -418,7 +418,7 @@ function reviewInput()
  checkpassword();
  checkpass2();
  
-  if (error_flag == "1")
+  if (error_flag == 1)
   {
     alert("Please fix the errors before submitting.");
   }
