@@ -408,3 +408,31 @@ function checkpassword()
     return true;
    }
 }
+
+function reviewInput() 
+{
+ let noErrors =
+ checkfirstname()
+ checkmiddle()
+ checklastname()
+ checkdob()
+ checkssn()
+ checkemail()
+ checkcity()
+ checkstate()
+ checkzip()
+ checkaddress1()
+ checkaddress2()
+ checkusername()
+ checkpassword()
+ checkpass2();
+ 
+  if (noErrors == false)
+  {
+    alert("Please fix the errors before submitting");
+  }
+  else 
+  {
+    document.getElementById("submit").disabled = false;
+  }
+}
