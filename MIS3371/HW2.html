@@ -412,15 +412,11 @@ Description: HTML base of medical form webpage
               </table> 
             </div>
             <div class="submitreset-container">
-              <input type="submit" id="submit" disabled>
               <input type="reset">
-              <input type="button"
-                name="review"
-                id="review"
-                value="Review"
-                onclick="reviewInput()"
-                >
-          </div>
+              <input type="button" id="getinfo" value="Review your info." onclick="getinfo()">
+              <input type="button" name="review" id="review" value="Review" onclick="reviewInput()">
+              <input type="submit" id="submit" disabled>
+            </div>
           <!-- New -->
           <center>
             <p id="showInput"></p>
