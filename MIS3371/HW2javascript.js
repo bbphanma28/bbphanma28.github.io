@@ -306,7 +306,6 @@ function checkaddress2()
   else 
   {
    document.getElementById("address2-error").innerHTML = "";
-   error_flag = 1;
   }
 }
 
