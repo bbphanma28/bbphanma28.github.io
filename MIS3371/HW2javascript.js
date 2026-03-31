@@ -16,7 +16,7 @@ function checkfirstname()
     
   if (x == "")
   {
-    document.getElementById("fname-error").innerHTML = "Please enter first name"
+    document.getElementById("fname-error").innerHTML = "Please enter first name";
     error_flag = 1;
   }
   else if (!x.match(fnamePattern))
@@ -69,7 +69,6 @@ function checklastname()
    else
    {
     document.getElementById("lname-error").innerHTML = ""
-    error_flag = 1;
    }
  }
 
@@ -92,7 +91,6 @@ function checkmiddle()
   else 
   {
    document.getElementById("middle-error").innerHTML = "";
-   error_flag = 1;
   }
 }
 
@@ -208,7 +206,6 @@ function checkstate()
  else 
  {
   document.getElementById("state-error").innerHTML = ""
-  error_flag = 1;
  }
 }
 
