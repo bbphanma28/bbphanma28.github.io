@@ -2,9 +2,11 @@
  Name: Breanna Phanmaha
  File: HW2javascript.js
  Date Created: 03-09-2026
- Date Updated: 
+ Date Updated: 3/27/2026
  Purpose: Validates/checks important fields 
 */
+
+var error_flag = 0;
 
 //Checking First Name
 function checkfirstname()
@@ -15,27 +17,26 @@ function checkfirstname()
   if (x == "")
   {
     document.getElementById("fname-error").innerHTML = "Please enter first name"
-    return false;
+    error_flag = 1;
   }
   else if (!x.match(fnamePattern))
   {
     document.getElementById("fname-error").innerHTML = "Letters, apostrophes and dashes only";
-    return false;
+    error_flag = 1;
   }
   else if (x.length > 30)
   {
     document.getElementById("fname-error").innerHTML = "First name is too long";
-    return false;
+    error_flag = 1;
   }
   else if (x.length < 2)
   {
     document.getElementById("fname-error").innerHTML = "First name is too short";
-    return false;
+    error_flag = 1;
   }
   else
   {
-    document.getElementById("fname-error").innerHTML = ""
-    return true;
+    document.getElementById("fname-error").innerHTML = "";
   }
  }
 
@@ -48,27 +49,27 @@ function checklastname()
    if (x == "")
    {
     document.getElementById("lname-error").innerHTML = "Last name cannot be empty"
-    return false;
+    error_flag = 1;
    }
    else if (!x.match(lnamePattern))
    {
     document.getElementById("lname-error").innerHTML = "Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only";
-    return false;
+    error_flag = 1;
    }
    else if (x.length > 30)
    {
     document.getElementById("lname-error").innerHTML = "Last name is too long";
-    return false;
+    error_flag = 1;
    }
    else if (x.length < 2)
    {
     document.getElementById("lname-error").innerHTML = "Last name is too short";
-    return false;
+    error_flag = 1;
    }
    else
    {
     document.getElementById("lname-error").innerHTML = ""
-    return true;
+    error_flag = 1;
    }
  }
 
@@ -86,12 +87,12 @@ function checkmiddle()
   if (!x.match(mnamePattern))
   {
    document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
-   return false;
+   error_flag = 1;
   }
   else 
   {
    document.getElementById("middle-error").innerHTML = "";
-   return true;
+   error_flag = 1;
   }
 }
 
@@ -105,17 +106,16 @@ function checkdob()
   if (currentYear > new Date())
   {
    document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the future";
-   return false;
+   error_flag = 1;
   }
   else if (currentYear < new Date(maxYear))
   {
    document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the past";
-   return false;
+   error_flag = 1;
   }
   else
   {
    document.getElementById("dob-error").innerHTML = "";
-   return true;
   }
 }
 
@@ -128,17 +128,16 @@ function checkssn()
   if (x == "")
   {
    document.getElementById("ssn-error").innerHTML = "Please enter your SSN";
-   return false;
+   error_flag = 1;
   }
   else if (!x.match(sPattern))
   {
    document.getElementById("ssn-error").innerHTML = "Invalid SSN";
-   return false;
+   error_flag = 1;
   }
   else
   {
    document.getElementById("ssn-error").innerHTML = "";
-   return true;
   }
 }
 
@@ -151,17 +150,16 @@ function checkemail()
   if (x == "")
   {
     document.getElementById("email-error").innerHTML = "Please enter an email";
-    return false;
+    error_flag = 1;
   }
   else if (!x.match(emailPattern))
   {
     document.getElementById("email-error").innerHTML = "Email is invalid";
-    return false;
+    error_flag = 1;
   }
   else
   {
     document.getElementById("email-error").innerHTML = "";
-    return true;
   }
 }
 
@@ -174,27 +172,26 @@ function checkcity()
   if (x == "")
   {
     document.getElementById("city-error").innerHTML = "Please enter a City";
-    return false;
+    error_flag = 1;
   }
   else if (!x.match(cityPattern))
   {
    document.getElementById("city-error").innerHTML = "Letters allowed only";
-   return false;
+   error_flag = 1;
   }
   else if (x.length < 2)
   {
    document.getElementById("city-error").innerHTML = "City name is too short";
-   return false;
+   error_flag = 1;
   }
   else if (x.length > 30)
   {
    document.getElementById("city-error").innerHTML = "City name is too long";
-   return false;
+   error_flag = 1;
   }
   else
   {
    document.getElementById("city-error").innerHTML = ""
-   return true;
   }
 }
 
@@ -206,12 +203,12 @@ function checkstate()
  if (x == "")
  {
   document.getElementById("state-error").innerHTML = "Please choose a state";
-  return false;
+  error_flag = 1;
  }
  else 
  {
   document.getElementById("state-error").innerHTML = ""
-  return true;
+  error_flag = 1;
  }
 }
 
@@ -221,22 +218,22 @@ function checkzip()
   x = document.getElementById("zip");
   zipEdit = x.value.replace(/\D/g, "");
 
-  if (zipEdit.length == 5)
-  {
-   document.getElementById("zip-error").innerHTML = "";
-   return true;
-  }
   if (!zipEdit) 
   {
    document.getElementById("zip-error").innerHTML = "Please enter zip code with only numbers";
-   return false;
+   error_flag = 1;
   }
   else if (zipEdit.length != 5 && zipEdit.length != 9)
   {
    document.getElementById("zip-error").innerHTML = "Zip code needs to be exactly 5 or 9 numbers";
-   return false;
+   error_flag = 1;
   }
- 
+  else
+  {
+   document.getElementById("zip-error").innerHTML = "";
+  }
+
+ //formatting zip with a dash after 5 digits
   if (zipEdit.length > 5) 
   {
    zipEdit = zipEdit.slice(0, 5) + "-" + zipEdit.slice(5, 9);
@@ -245,10 +242,8 @@ function checkzip()
   {
    zipEdit = zipEdit.slice(0, 5);
   }
-     
    x.value = zipEdit;
-   document.getElementById("zip-error").innerHTML = "";
-   return true;
+
 }
 
 //Check Address 1
@@ -260,27 +255,26 @@ function checkaddress1()
   if (x == "")
   {
    document.getElementById("address1-error").innerHTML = "Please enter an address";
-   return false;
+   error_flag = 1;
   }
   else if (!x.match(addressPattern))
   {
    document.getElementById("address1-error").innerHTML = "Only letters and numbers allowed";
-   return false;
+   error_flag = 1;
   }
   else if (x.length < 2)
   {
    document.getElementById("address1-error").innerHTML = "Address is too short";
-   return false;
+   error_flag = 1;
   }
   else if (x.length > 30)
   {
    document.getElementById("address1-error").innerHTML = "Address is too long";
-   return false;
+   error_flag = 1;
   }
   else 
   {
    document.getElementById("address1-error").innerHTML = "";
-   return true;
   }
 }
 
@@ -299,22 +293,22 @@ function checkaddress2()
   if (!x.match(addressPattern))
   {
    document.getElementById("address2-error").innerHTML = "Only letters and numbers allowed";
-   return false;
+   error_flag = 1;
   }
   else if (x.length < 2)
   {
    document.getElementById("address2-error").innerHTML = "Address is too short";
-   return false;
+   error_flag = 1;
   }
   else if (x.length > 30)
   {
    document.getElementById("address2-error").innerHTML = "Address is too long";
-   return false;
+   error_flag = 1;
   }
   else 
   {
    document.getElementById("address2-error").innerHTML = "";
-   return true;
+   error_flag = 1;
   }
 }
 
@@ -327,32 +321,31 @@ function checkusername()
   if (x == "")
   {
    document.getElementById("username-error").innerHTML = "Please enter a username";
-   return false;
+   error_flag = 1;
   }
   else if (!isNaN(x.charAt(0)))
   {
    document.getElementById("username-error").innerHTML = "Username cannot be started with a number";
-   return false;
+   error_flag = 1;
   }
   else if (!x.match(userPattern))
   {
    document.getElementById("username-error").innerHTML = "Username can only have letters, numbers, underscores, and dashes";
-   return false;
+   error_flag = 1;
   }
   else if (x.length < 5)
   {
    document.getElementById("username-error").innerHTML = "Username is too short";
-   return false;
+   error_flag = 1;
   }
   else if (x.length > 30)
   {
    document.getElementById("username-error").innerHTML = "Username is too long";
-   return false;
+   error_flag = 1;
   }
   else
   {
    document.getElementById("username-error").innerHTML = "";
-   return true;
   }
 }
 
@@ -365,27 +358,26 @@ function checkpassword()
   if (x == "")
   {
    document.getElementById("password1-error").innerHTML = "Please enter a password";
-   return false;
+   error_flag = 1;
   }
   else if (x.length < 8)
   {
    document.getElementById("password1-error").innerHTML = "Password is too short";
-   return false;
+   error_flag = 1;
   }
   else if (x.length > 30)
   {
    document.getElementById("password1-error").innerHTML = "Password is too long";
-   return false;
+   error_flag = 1;
   }
   else if ( x == y || x.includes(y))
   {
   document.getElementById("password1-error").innerHTML = "Password cannot contain username";
-  return false;
+  error_flag = 1;
   }
  else 
  {
  document.getElementById("password1-error").innerHTML = "";
- return true;
  }
 }
 
@@ -399,37 +391,36 @@ function checkpassword()
    {
     document.getElementById("confirmpass-error").innerHTML = 
     "Passwords don't match";
-    return false;
+    error_flag = 1;
    } 
    else 
    {
     document.getElementById("confirmpass-error").innerHTML = 
     "Passwords match";
-    return true;
    }
 }
 
 function reviewInput() 
 {
- let noErrors =
- checkfirstname()
- checkmiddle()
- checklastname()
- checkdob()
- checkssn()
- checkemail()
- checkcity()
- checkstate()
- checkzip()
- checkaddress1()
- checkaddress2()
- checkusername()
- checkpassword()
+ error_flag = "0";
+ checkfirstname();
+ checkmiddle();
+ checklastname();
+ checkdob();
+ checkssn();
+ checkemail();
+ checkcity();
+ checkstate();
+ checkzip();
+ checkaddress1();
+ checkaddress2();
+ checkusername();
+ checkpassword();
  checkpass2();
  
-  if (noErrors == false)
+  if (error_flag == "1")
   {
-    alert("Please fix the errors before submitting");
+    alert("Please fix the errors before submitting.");
   }
   else 
   {
