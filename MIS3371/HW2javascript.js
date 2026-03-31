@@ -480,3 +480,52 @@ function reviewInput()
     document.getElementById("submit").disabled = false;
   }
 }
+
+function getinfo() {
+  var formcontents = document.getElementById("signup");
+  var formoutput = "<table border='1'><tr><th>Name</th><th>Type</th><th>Value</th></tr>";
+  var datatype;
+  var hasData = false;
+
+  for (var i = 0; i < formcontents.elements.length; i++) {
+    var el = formcontents.elements[i];
+    datatype = el.type;
+
+    if (el.value !== "") {
+      switch (datatype) {
+        case "checkbox":
+          if (el.checked) {
+            formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>Checked</td></tr>`;
+            hasData = true;
+          }
+          break;
+
+        case "radio":
+          if (el.checked) {
+            formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>${el.value}</td></tr>`;
+            hasData = true;
+          }
+          break;
+
+        case "button":
+        case "submit":
+        case "reset":
+          break;
+
+        default:
+          formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>${el.value}</td></tr>`;
+          hasData = true;
+      }
+    }
+  }
+
+  if (hasData) {
+    formoutput += "</table>";
+    document.getElementById("outputformdata").innerHTML = formoutput;
+
+    // scroll to it so user sees it
+    document.getElementById("outputformdata").scrollIntoView({ behavior: "smooth" });
+  } else {
+    alert("Please enter some data first.");
+  }
+}
