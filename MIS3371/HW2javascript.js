@@ -231,7 +231,7 @@ function checkzip()
    document.getElementById("zip-error").innerHTML = "Please enter zip code with only numbers";
    return false;
   }
-  else if (zipEdit.length < 5 || zipEdit.length < 9)
+  else if (zipEdit.length != 5 && zipEdit.length != 9)
   {
    document.getElementById("zip-error").innerHTML = "Zip code needs to be exactly 5 or 9 numbers";
    return false;
