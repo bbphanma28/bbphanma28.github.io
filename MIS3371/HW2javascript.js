@@ -496,7 +496,7 @@ function getdata1() {
         switch (datatype) {
             case "checkbox":
                 if (el.checked) {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<tr><td align='right'>" + value + "</td>";
                     formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
