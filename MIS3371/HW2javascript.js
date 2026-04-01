@@ -476,7 +476,8 @@ function checkErrors()
   }
   else 
   {
-    document.getElementById("submit").disabled = false + alert("You have no errors! You can hit submit now.");
+    alert("You have no errors! You can hit submit now.");
+    document.getElementById("submit").disabled = false;
   }
 }
 
