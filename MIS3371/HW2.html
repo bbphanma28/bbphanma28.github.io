@@ -413,22 +413,22 @@ Description: HTML base of medical form webpage
             </div>
             <div class="submitreset-container">
               <input type="reset">
-              <input type="button" id="getinfo" value="Review your info." onclick="getinfo()">
-              <input type="button" name="review" id="review" value="Review" onclick="reviewInput()">
+              <input type="button" name="getData" id="getdata" value="Check your info." onclick="getdata1()">
+              <input type="button" name="errorcheck" id="errorcheck" value="Error check" onclick="checkErrors()">
               <input type="submit" id="submit" disabled>
             </div>
-          <!-- New -->
-          <center>
-            <p id="showInput"></p>
-          </center>
       </form>
       </div>
-      
+
+    <!-- Review Table Pop-up -->
+    <div id="outputformdata"></div>
+
+    <!-- Footer -->
     <div id="footer">
       <p>Our Contact Information:</p>
       <button type="button" onclick="alert('BB28Medical@yahoo.com')">Here</button>
     </div>
-<div id="outputformdata"></div>
+      
     <!-- Javascript Start -->
     <script src="HW2javascript.js"></script>
       
