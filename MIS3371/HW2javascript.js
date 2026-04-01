@@ -452,7 +452,7 @@ function checkpassword()
    }
 }
 
-function reviewInput() 
+function checkErrors() 
 {
  error_flag = 0;
  checkfirstname();
@@ -476,55 +476,60 @@ function reviewInput()
   }
   else 
   {
-    document.getElementById("submit").disabled = false;
+    document.getElementById("submit").disabled = false + alert("You have no errors! You can hit submit now.";
   }
 }
 
-function getinfo() {
-  var formcontents = document.getElementById("signup");
-  var formoutput = "<table border='1'><tr><th>Name</th><th>Type</th><th>Value</th></tr>";
-  var datatype;
-  var hasData = false;
+function getdata1() {
+    var formcontent = document.getElementById("signup");
+    var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
 
-  for (var i = 0; i < formcontents.elements.length; i++) {
-    var el = formcontents.elements[i];
-    datatype = el.type;
+    for (var i = 0; i < formcontent.elements.length; i++) {
+        var el = formcontent.elements[i];
+        var datatype = el.type;
+        var name = el.name;
+        var value = el.value;
 
-    if (el.value !== "") {
-      switch (datatype) {
-        case "checkbox":
-          if (el.checked) {
-            formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>Checked</td></tr>`;
-            hasData = true;
-          }
-          break;
+        // skip elements with no name
+        if (!name) continue;
 
-        case "radio":
-          if (el.checked) {
-            formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>${el.value}</td></tr>`;
-            hasData = true;
-          }
-          break;
+        switch (datatype) {
+            case "checkbox":
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
+                }
+                break;
 
-        case "button":
-        case "submit":
-        case "reset":
-          break;
+            case "radio":
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+                break;
 
-        default:
-          formoutput += `<tr><td>${el.name}</td><td>${datatype}</td><td>${el.value}</td></tr>`;
-          hasData = true;
-      }
+            case "range":
+                // Only show the slider if the user moved it off the default (0)
+                if (value !== "0") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+                break;
+
+            case "button":
+            case "submit":
+            case "reset":
+                // skip
+                break;
+
+            default:
+                if (value !== "") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+        }
     }
-  }
 
-  if (hasData) {
     formoutput += "</table>";
     document.getElementById("outputformdata").innerHTML = formoutput;
-
-    // scroll to it so user sees it
-    document.getElementById("outputformdata").scrollIntoView({ behavior: "smooth" });
-  } else {
-    alert("Please enter some data first.");
-  }
 }
