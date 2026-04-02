@@ -498,25 +498,25 @@ function getdata1()
 
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
-        var el = formcontent.elements[i];
-        var datatype = el.type;
-        var name = el.name;
-        var value = el.value;
+        var x = formcontent.elements[i];
+        var datatype = x.type;
+        var name = x.name;
+        var value = x.value;
 
         if (!name) continue;
 
         switch (datatype)
         {
             case "checkbox":
-                if (el.checked) 
+                if (x.checked) 
                 {
                     formoutput += "<tr><td align='right'>" + value + "</td>";
-                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
+                    formoutput += "<td class='outputdata'></td></tr>";
                 }
                 break;
 
             case "radio":
-                if (el.checked) 
+                if (x.checked) 
                 {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
@@ -529,11 +529,6 @@ function getdata1()
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
-                break;
-
-            case "button":
-            case "submit":
-            case "reset":
                 break;
 
             default:
