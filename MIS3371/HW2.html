@@ -25,16 +25,14 @@ Description: HTML base of medical form webpage
       </div>
 
       <!-- Form Header -->
-        <div>
           <table id="formheader">
             <tr>
               <th>Patient Registration Form</th>
             </tr>
           </table>
-        </div>
         
         <!-- Form Start -->
-      <div id="form-container">
+      <div class="form-container">
         <form name="signup" id="signup" action="HW1-nextpage.html">
           <!-- Enter Name -->
           <div class="section-container">
@@ -398,8 +396,9 @@ Description: HTML base of medical form webpage
                     <span class="error" id="confirmpass-error"></span>
                   </td>
                 </tr>
-              <!-- Password Error Messages -->
-              <tr class="error-message">
+              </table>  
+            <!-- Password Error Messages -->
+              <div class="error-message">
                 <span id="pass-message1"></span><br>
                 <span id="pass-message2"></span><br>
                 <span id="pass-message3"></span><br>
@@ -408,8 +407,7 @@ Description: HTML base of medical form webpage
                 <span id="pass-message6"></span>
                 <span id="pass-message7"></span>
                 <span id="pass-message8"></span>
-              </tr>
-              </table> 
+              </div>
             </div>
             <div class="submitreset-container">
               <input type="reset">
