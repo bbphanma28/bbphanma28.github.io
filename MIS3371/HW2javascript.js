@@ -6,6 +6,9 @@
  Purpose: Validates/checks important fields 
 */
 
+//Date
+ document.getElementById("today").innerHTML = new Date().toLocaleDateString();    
+
 //assigning a value to variable error_flag
 var error_flag = 0;
 
@@ -308,6 +311,13 @@ function checkaddress2()
    document.getElementById("address2-error").innerHTML = "";
   }
 }
+
+//Display Value for slider
+ var slider = document.getElementById("healthslider");
+ var output = document.getElementById("scale");
+ output.innerHTML = slider.value;
+ slider.oninput = function() {
+   output.innerHTML = this.value; }
 
 //Check Username
 function checkusername()
