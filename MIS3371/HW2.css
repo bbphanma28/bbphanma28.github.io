@@ -30,7 +30,7 @@ body {
 	text-align: right;
 }
 
-#formheader {
+.formheader {
 	display: flex;
 	justify-content: center;
 	margin: 20px auto;
