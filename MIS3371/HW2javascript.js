@@ -382,19 +382,19 @@ function checkpassword()
     document.getElementById("pass-message2").innerHTML = "";
    }
  
-  if (x.length > 30)
+  if (x.search(/[a-z]/) < 0)
   {
-   document.getElementById("pass-message3").innerHTML = "Password is too long";
+   document.getElementById("pass-message3").innerHTML = "Enter at least one lower case letter";
    error_flag = 1;
   }
    else
    {
     document.getElementById("pass-message3").innerHTML = "";
    }
- 
-  if (x.search(/[a-z]/) < 0)
+
+  if (x.search(/[A-Z]/) < 0)
   {
-   document.getElementById("pass-message4").innerHTML = "Enter at least one lower case letter";
+   document.getElementById("pass-message4").innerHTML = "Enter at least one upper case letter";
    error_flag = 1;
   }
    else
@@ -402,9 +402,9 @@ function checkpassword()
     document.getElementById("pass-message4").innerHTML = "";
    }
 
-  if (x.search(/[A-Z]/) < 0)
+  if (x.search(/[0-9]/) < 0)
   {
-   document.getElementById("pass-message5").innerHTML = "Enter at least one upper case letter";
+   document.getElementById("pass-message5").innerHTML = "Enter at least 1 number";
    error_flag = 1;
   }
    else
@@ -412,22 +412,22 @@ function checkpassword()
     document.getElementById("pass-message5").innerHTML = "";
    }
 
-  if (x.search(/[0-9]/) < 0)
-  {
-   document.getElementById("pass-message6").innerHTML = "Enter at least 1 number";
-   error_flag = 1;
-  }
-   else
-   {
-    document.getElementById("pass-message6").innerHTML = "";
-   }
-
   if (x.search(/[!@#$%&*\-_\\.+()]/) < 0)
   {
-   document.getElementById("pass-message7").innerHTML = "Enter at least 1 special character excluding quotes";
+   document.getElementById("pass-message6").innerHTML = "Enter at least 1 special character excluding quotes";
    error_flag = 1;
   }
    else 
+   {
+    document.getElementById("pass-message6").innerHTML = "";
+   }
+ 
+   if (x.length > 30)
+  {
+   document.getElementById("pass-message7").innerHTML = "Password is too long";
+   error_flag = 1;
+  }
+   else
    {
     document.getElementById("pass-message7").innerHTML = "";
    }
