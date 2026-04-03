@@ -502,13 +502,12 @@ function getdata1() {
         var name = el.name;
         var value = el.value;
 
-        // skip elements with no name
         if (!name) continue;
 
         switch (datatype) {
             case "checkbox":
                 if (el.checked) {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<tr><td align='right'>" + value + "</td>";
                     formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
@@ -521,7 +520,6 @@ function getdata1() {
                 break;
 
             case "range":
-                // Only show the slider if the user moved it off the default (0)
                 if (value !== "0") {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
@@ -531,7 +529,6 @@ function getdata1() {
             case "button":
             case "submit":
             case "reset":
-                // skip
                 break;
 
             default:
