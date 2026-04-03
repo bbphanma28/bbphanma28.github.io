@@ -491,49 +491,50 @@ function checkErrors()
   }
 }
 
-function getdata1() 
-{
+function getdata1() {
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
 
-    for (var i = 0; i < formcontent.elements.length; i++) 
-    {
-        var x = formcontent.elements[i];
-        var datatype = x.type;
-        var name = x.name;
-        var value = x.value;
+    for (var i = 0; i < formcontent.elements.length; i++) {
+        var el = formcontent.elements[i];
+        var datatype = el.type;
+        var name = el.name;
+        var value = el.value;
 
+        // skip elements with no name
         if (!name) continue;
 
-        switch (datatype)
-        {
+        switch (datatype) {
             case "checkbox":
-                if (x.checked) 
-                {
-                    formoutput += "<tr><td align='right'>" + value + "</td>";
-                    formoutput += "<td class='outputdata'></td></tr>";
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
 
             case "radio":
-                if (x.checked) 
-                {
+                if (el.checked) {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
                 break;
 
             case "range":
-                if (value !== "0") 
-                {
+                // Only show the slider if the user moved it off the default (0)
+                if (value !== "0") {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
                 break;
 
+            case "button":
+            case "submit":
+            case "reset":
+                // skip
+                break;
+
             default:
-                if (value != "") 
-                {
+                if (value !== "") {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
@@ -543,3 +544,4 @@ function getdata1()
     formoutput += "</table>";
     document.getElementById("outputformdata").innerHTML = formoutput;
 }
+
