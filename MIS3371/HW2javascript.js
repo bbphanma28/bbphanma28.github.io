@@ -493,7 +493,8 @@ function checkErrors()
 }
 
 //Display review table
-function getdata1() {
+function getdata1() 
+{
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
 
@@ -525,7 +526,7 @@ function getdata1() {
                 break;
 
             case "range":
-                if (value != "0") 
+                if (value !== "0") 
                 {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
@@ -538,7 +539,7 @@ function getdata1() {
                 break;
 
             default:
-                if (value != "") 
+                if (value !== "") 
                 {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
