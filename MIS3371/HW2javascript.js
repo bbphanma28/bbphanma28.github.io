@@ -52,7 +52,7 @@ function checklastname()
     
    if (x == "")
    {
-    document.getElementById("lname-error").innerHTML = "Last name cannot be empty"
+    document.getElementById("lname-error").innerHTML = "Please enter last name";
     error_flag = 1;
    }
    else if (!x.match(lnamePattern))
