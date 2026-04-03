@@ -496,12 +496,14 @@ function checkErrors()
 function getdata1() {
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
-    var x = formcontent.elements[i];
-    var name = x.name;
-    var value = x.value;
+
  
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
+      var x = formcontent.elements[i];
+      var name = x.name;
+      var value = x.value;
+     
         if (!name) continue;
 
         switch (datatype) 
