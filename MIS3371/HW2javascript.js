@@ -87,6 +87,7 @@ function checkmiddle()
    document.getElementById("middle-error").innerHTML = "";
    return true;
   }
+ 
   if (!x.match(mnamePattern))
   {
    document.getElementById("middle-error").innerHTML = "Middle initial can only be letters";
@@ -104,6 +105,16 @@ function checkdob()
  x = document.getElementById("birthday");
  currentYear = new Date(x.value);
  maxYear = new Date().setFullYear(new Date().getFullYear() - 120);
+
+  if (x == "")
+  {
+   document.getElementById("dob-error").innerHTML = "Please enter your date of birth";
+   error_flag = 1;
+  }
+   else
+  {
+   document.getElementById("dob-error").innerHTML = "";
+  }
 
   if (currentYear > new Date())
   {
