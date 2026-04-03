@@ -163,8 +163,8 @@ button {
 	color: red;
 }
 
-.pword-message {
-    text-align: right;
+.error-message {
+    text-align: left;
     position: relative;
     left: 100px;
     background: transparent;
@@ -177,8 +177,10 @@ button {
 table.output,
 tr.output,
 td.output {
+	display: flex;
+	justify-content: center;
     width: 500px;
-    background-color: white;
+    background-color: salmon;
     padding: 10px;
     border-spacing: 2px;
     border-radius: 20px;
