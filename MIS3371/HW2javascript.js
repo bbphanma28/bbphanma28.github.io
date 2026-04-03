@@ -502,7 +502,7 @@ function getdata1()
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
       var x = formcontent.elements[i];
-      var datatype = x.datatype;
+      var datatype = x.type;
       var name = x.name;
       var value = x.value;
      
@@ -514,7 +514,7 @@ function getdata1()
                 if (x.checked) 
                 {
                     formoutput += "<tr><td align='right'>" + value + "</td>";
-                    formoutput += "<td class='outputdata'>&#x2714;</td></tr>";
+                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
 
