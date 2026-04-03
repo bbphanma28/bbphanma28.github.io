@@ -164,13 +164,7 @@ button {
 }
 
 .error-message {
-    position: relative;
-    left: 100px;
-    background: transparent;
-    padding: 10px;
-    border-spacing: 2px;
-    border-radius: 20px;
-    color: hotpink;
+    color: red;
 }
 
 table.output,
@@ -181,7 +175,7 @@ td.output {
 	margin: 0 auto;
     width: 500px;
     background-color: white;
-    padding: 10px;
+    padding: 30px;
     border-spacing: 2px;
     border-radius: 20px;
     color: red;
