@@ -452,14 +452,12 @@ function checkpassword()
 
    if (x != y) 
    {
-    document.getElementById("confirmpass-error").innerHTML = 
-    "Passwords don't match";
+    document.getElementById("confirmpass-error").innerHTML = "Passwords don't match";
     error_flag = 1;
    } 
    else 
    {
-    document.getElementById("confirmpass-error").innerHTML = 
-    "Passwords match";
+    document.getElementById("confirmpass-error").innerHTML = "";
    }
 }
 
