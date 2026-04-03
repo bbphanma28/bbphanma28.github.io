@@ -106,16 +106,6 @@ function checkdob()
  currentYear = new Date(x.value);
  maxYear = new Date().setFullYear(new Date().getFullYear() - 120);
 
-  if (x == "")
-  {
-   document.getElementById("dob-error").innerHTML = "Please enter your date of birth";
-   error_flag = 1;
-  }
-   else
-  {
-   document.getElementById("dob-error").innerHTML = "";
-  }
-
   if (currentYear > new Date())
   {
    document.getElementById("dob-error").innerHTML = "Date of Birth cannot be more than 120 years in the future";
