@@ -164,14 +164,13 @@ button {
 }
 
 .error-message {
-    text-align: left;
     position: relative;
     left: 100px;
     background: transparent;
     padding: 10px;
     border-spacing: 2px;
     border-radius: 20px;
-    color: red;
+    color: hotpink;
 }
 
 table.output,
