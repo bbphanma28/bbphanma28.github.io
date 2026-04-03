@@ -502,6 +502,7 @@ function getdata1()
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
       var x = formcontent.elements[i];
+      var datatype = x.datatype;
       var name = x.name;
       var value = x.value;
      
@@ -526,7 +527,7 @@ function getdata1()
                 break;
 
             case "range":
-                if (value !== "0") 
+                if (value != "0") 
                 {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
@@ -539,7 +540,7 @@ function getdata1()
                 break;
 
             default:
-                if (value !== "") 
+                if (value != "") 
                 {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
