@@ -497,55 +497,53 @@ function getdata1()
 {
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
-
+    var x = formcontent.elements[i];
+    var datatype = x.type;
+    var name = x.name;
+    var value = x.value;
  
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
-      var x = formcontent.elements[i];
-      var datatype = x.type;
-      var name = x.name;
-      var value = x.value;
-     
-        if (!name) continue;
-
-        switch (datatype) 
-        {
-            case "checkbox":
-                if (x.checked) 
-                {
-                    formoutput += "<tr><td align='right'>" + value + "</td>";
-                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
-                }
-                break;
-
-            case "radio":
-                if (x.checked) 
-                {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
-                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
-                }
-                break;
-
-            case "range":
-                if (value != "0") 
-                {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
-                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
-                }
-                break;
-
-            case "button":
-            case "submit":
-            case "reset":
-                break;
-
-            default:
-                if (value != "") 
-                {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
-                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
-                }
-        }
+      if (!name) continue;
+ 
+      switch (datatype) 
+      {
+          case "checkbox":
+              if (x.checked) 
+              {
+                  formoutput += "<tr><td align='right'>" + value + "</td>";
+                  formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
+              }
+              break;
+ 
+          case "radio":
+              if (x.checked) 
+              {
+                  formoutput += "<tr><td align='right'>" + name + "</td>";
+                  formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+              }
+              break;
+ 
+          case "range":
+              if (value != "0") 
+              {
+                  formoutput += "<tr><td align='right'>" + name + "</td>";
+                  formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+              }
+              break;
+ 
+          case "button":
+          case "submit":
+          case "reset":
+              break;
+ 
+          default:
+              if (value != "") 
+              {
+                  formoutput += "<tr><td align='right'>" + name + "</td>";
+                  formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+              }
+      }
     }
 
     formoutput += "</table>";
