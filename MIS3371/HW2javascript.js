@@ -492,35 +492,39 @@ function checkErrors()
   }
 }
 
+//Display review table
 function getdata1() {
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
-
-    for (var i = 0; i < formcontent.elements.length; i++) {
-        var el = formcontent.elements[i];
-        var datatype = el.type;
-        var name = el.name;
-        var value = el.value;
-
+    var x = formcontent.elements[i];
+    var name = x.name;
+    var value = x.value;
+ 
+    for (var i = 0; i < formcontent.elements.length; i++) 
+    {
         if (!name) continue;
 
-        switch (datatype) {
+        switch (datatype) 
+        {
             case "checkbox":
-                if (el.checked) {
+                if (x.checked) 
+                {
                     formoutput += "<tr><td align='right'>" + value + "</td>";
                     formoutput += "<td class='outputdata'>&#x2714;</td></tr>";
                 }
                 break;
 
             case "radio":
-                if (el.checked) {
+                if (x.checked) 
+                {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
                 break;
 
             case "range":
-                if (value !== "0") {
+                if (value != "0") 
+                {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
@@ -532,7 +536,8 @@ function getdata1() {
                 break;
 
             default:
-                if (value !== "") {
+                if (value != "") 
+                {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
