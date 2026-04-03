@@ -158,3 +158,14 @@ button {
 	margin-top: 15px;
 	font-family: 'Courier New', monospace;
 }
+
+.error {
+	color: red;
+}
+
+outputformdata {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	color: red;
+}
