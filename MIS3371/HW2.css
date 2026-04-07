@@ -159,12 +159,12 @@ button {
 	font-family: 'Courier New', monospace;
 }
 
-.error {
+.error, .error-message {
 	color: red;
 }
 
-.error-message {
-    color: red;
+.error {
+	font-size: 10pt;
 }
 
 table.output,
@@ -174,9 +174,9 @@ td.output {
 	justify-content: center;
 	margin: 0 auto;
 	margin-top: 20px;
-    width: 500px;
-    padding: 30px;
-    border-radius: 20px;
+	width: 500px;
+	padding: 30px;
+	border-radius: 20px;
 	background-color: #3AA167;
 	border: solid 5px #0A4747;
 	color: #EDFFD6;
