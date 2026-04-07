@@ -491,7 +491,7 @@ function checkErrors()
 }
 
 //Display review table
-function getdata1() 
+function reviewinfo() 
 {
     var formcontent = document.getElementById("signup");
     var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
