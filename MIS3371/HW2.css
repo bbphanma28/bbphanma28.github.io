@@ -1,7 +1,7 @@
 /*
 Author: Breanna Phanmaha
 Date created: 2/9/2026
-Date last edited: 2/27/2026
+Date last edited: 3/27/2026
 Version: 2.0
 Description: CSS of html
 */
@@ -175,9 +175,9 @@ td.output {
 	margin: 0 auto;
 	margin-top: 20px;
     width: 500px;
-    background-color: white;
     padding: 30px;
-    border-spacing: 2px;
     border-radius: 20px;
-    color: red;
+	background-color: #3AA167;
+	border: solid 5px #0A4747;
+	color: #EDFFD6;
 }
