@@ -1,9 +1,9 @@
 /* 
  Name: Breanna Phanmaha
- File: HW2javascript.js
+ File: HW2.js
  Date Created: 03-09-2026
  Date Updated: 3-27-2026
- Purpose: Validates/checks important fields 
+ Purpose: Validates/checks important fields for HW2
 */
 
 //Date
