@@ -500,7 +500,7 @@ function checkErrors()
 function reviewinfo() 
 {
     var formcontent = document.getElementById("signup");
-    var formoutput = "<table class='output'><tr><th>Review Your Information:</th></tr>";
+    var formoutput = "<table class='output'><tr><th colspan='3'>Review Your Information:</th></tr>";
    
     for (var i = 0; i < formcontent.elements.length; i++) 
     {
