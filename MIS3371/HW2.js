@@ -106,7 +106,7 @@ function checkdob()
  currentYear = new Date(x.value);
  maxYear = new Date().setFullYear(new Date().getFullYear() - 120);
 
-  if (x.trim() == "")
+  if (!x.value)
   {
    document.getElementById("dob-error").innerHTML = "Please enter your date of birth";
    error_flag = 1;
