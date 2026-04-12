@@ -15,7 +15,7 @@ var error_flag = 0;
 //Checking First Name
 function checkfirstname()
 {
- x = document.getElementById("fname").value.trim();
+ let x = document.getElementById("fname").value.trim();
  fnamePattern = /^[a-zA-Z'-]+$/;
     
   if (x == "")
@@ -47,7 +47,7 @@ function checkfirstname()
 //Checking Last name
 function checklastname()
  {
-  x = document.getElementById("lname").value.trim();
+  let x = document.getElementById("lname").value.trim();
   lnamePattern = /^[a-zA-Z'2-5- ]+$/;
     
    if (x == "")
@@ -79,7 +79,7 @@ function checklastname()
 //Check Middle Initial 
 function checkmiddle()
 {
- x = document.getElementById("middleinit").value;
+ let x = document.getElementById("middleinit").value;
  mnamePattern = /^[a-zA-Z]$/;
 
   if (x == "")
@@ -102,7 +102,7 @@ function checkmiddle()
 // Check Date of Birth
 function checkdob()
 {
- x = document.getElementById("birthday");
+ let x = document.getElementById("birthday");
  currentYear = new Date(x.value);
  maxYear = new Date().setFullYear(new Date().getFullYear() - 120);
 
@@ -125,7 +125,7 @@ function checkdob()
 //Checking SSN
 function checkssn()
 {
- x = document.getElementById("SSN").value;
+ let x = document.getElementById("SSN").value;
  sPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
 
   if (x == "")
@@ -147,7 +147,7 @@ function checkssn()
 //Check Email
 function checkemail()
 {
- x = document.getElementById("email").value;
+ let x = document.getElementById("email").value;
  emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   if (x == "")
@@ -169,7 +169,7 @@ function checkemail()
 //Check City
 function checkcity()
 {
- x = document.getElementById("city").value.trim();
+ let x = document.getElementById("city").value.trim();
  cityPattern = /^[a-zA-Z ]+$/;
 
   if (x == "")
@@ -201,7 +201,7 @@ function checkcity()
 //Check State
 function checkstate()
 {
- x = document.getElementById("state").value;
+ let x = document.getElementById("state").value;
 
  if (x == "")
  {
@@ -217,7 +217,7 @@ function checkstate()
 //Check Zip Code
 function checkzip()
 {
-  x = document.getElementById("zip");
+  let x = document.getElementById("zip");
   zipEdit = x.value.replace(/\D/g, "");
 
   if (!zipEdit) 
@@ -251,7 +251,7 @@ function checkzip()
 //Check Address 1
 function checkaddress1()
 {
- x = document.getElementById("address1").value.trim();
+ let x = document.getElementById("address1").value.trim();
  addressPattern = /^[a-zA-Z0-9 ]+$/;
 
   if (x == "")
@@ -283,7 +283,7 @@ function checkaddress1()
 //Check Address 2
 function checkaddress2()
 {
- x = document.getElementById("address2").value.trim();
+ let x = document.getElementById("address2").value.trim();
  addressPattern = /^[a-zA-Z0-9 ]+$/;
 
   if (x == "")
@@ -323,7 +323,7 @@ function checkaddress2()
 //Check Username
 function checkusername()
 {
- x = document.getElementById("username").value.toLowerCase();
+ let x = document.getElementById("username").value.toLowerCase();
  userPattern = /^[a-zA-Z0-9_-]+$/;
 
   if (x == "")
@@ -360,8 +360,8 @@ function checkusername()
 //Check Password 
 function checkpassword()
 {
- x = document.getElementById("pass").value;
- y = document.getElementById("username").value;
+ let x = document.getElementById("pass").value;
+ let y = document.getElementById("username").value;
 
   if (x == "")
   {
@@ -447,8 +447,8 @@ function checkpassword()
 //Confirming password
  function checkpass2()
  {
-  x = document.getElementById("pass").value;
-  y = document.getElementById("confirmpass").value;
+  let x = document.getElementById("pass").value;
+  let y = document.getElementById("confirmpass").value;
 
    if (x != y) 
    {
