@@ -125,15 +125,16 @@ function checkdob()
 //Checking SSN
 function checkssn()
 {
- x = document.getElementById("SSN").value;
- sPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+ x = document.getElementById("SSN");
+ ssnPattern = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+ ssnEdit = x.value.replace(/\D/g, "");
 
-  if (x == "")
+  if (ssnEdit == "")
   {
    document.getElementById("ssn-error").innerHTML = "Please enter your SSN";
    error_flag = 1;
   }
-  else if (!x.match(sPattern))
+  else if (!ssnEdit.match(ssnPattern))
   {
    document.getElementById("ssn-error").innerHTML = "Invalid SSN";
    error_flag = 1;
@@ -142,6 +143,9 @@ function checkssn()
   {
    document.getElementById("ssn-error").innerHTML = "";
   }
+  //formatting ssn
+  formattedSSN = ssnEdit.slice(0, 3) + "-" + ssnEdit.slice(3, 5) + "-" + ssnEdit.slice(5);
+  x.value = formattedSSN;
 }
 
 //Check Email
