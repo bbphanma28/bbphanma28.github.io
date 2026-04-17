@@ -461,7 +461,7 @@ function checkpassword()
    }
 }
 
-function checkErrors() 
+function validateFields() 
 {
  error_flag = 0;
  checkfirstname();
