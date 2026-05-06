@@ -30,6 +30,20 @@ body {
 	text-align: right;
 }
 
+header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #F8FBF4;
+	transition: background-color 0.4 ease-in-out;
+	z-index: 1000;
+}
+
+header.scrolled {
+	background-color: #F8FBF4;
+	opacity: 1.0;
+}
+
 #formheader {
 	display: flex;
 	justify-content: center;
@@ -180,4 +194,33 @@ td.output {
 	background-color: #3AA167;
 	border: solid 5px #0A4747;
 	color: #EDFFD6;
+}
+
+.iframe-container {
+	position: absolute;
+	box-sizing: border-box;
+	top: 25%;
+	right: 15px; 
+	width: 25%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.iframe-container iframe {
+	width: 95%;
+	height: 20%;
+	border: 1px solid black;
+}
+
+#welcome1 {
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: center;
+	
+}
+
+#welcome2 {
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: center;
 }
