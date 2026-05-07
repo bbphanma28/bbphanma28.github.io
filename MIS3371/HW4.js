@@ -578,7 +578,7 @@ function getCookie(name)
     return "";
 }
 
-var inputs
+var inputs =
 [
   {id: "fname", cookieName: "firstName"},
   {id: "lname", cookieName: "lastName"},
