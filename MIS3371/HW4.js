@@ -563,16 +563,17 @@ function setCookie(name, cvalue, expiryDays)
 
 function getCookie(name) 
 {
-  var cookieName = name + "=";
-  var cookies = document.cookie.split(';');
+  let cookieName = name + "=";
+  let cookies = document.cookie.split(';');
  
   for(let i = 0; i < cookies.length; i++) 
   {
-    var cookie = cookies[i].trim();
+    let cookie = cookies[i].trim();
     if (cookie.indexOf(cookieName) == 0)
     {
       return cookie.substring(cookieName.length, cookie.length);
     }
+  }
    return "";
 }
 
@@ -581,7 +582,7 @@ var inputs = [
   {id: "lname", cookieName: "lastName"},
   {id: "middleinit", cookieName: "middleInitial"},
   {id: "birthday", cookieName: "birthday"},
-  {id: "ssn", cookieName: "ssn"},
+  {id: "SSN", cookieName: "ssn"},
   {id: "email", cookieName: "email"},
   {id: "city", cookieName: "city"},
   {id: "zip", cookieName: "zipCode"},
