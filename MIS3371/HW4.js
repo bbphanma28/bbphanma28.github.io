@@ -553,32 +553,27 @@ function reviewinfo()
     document.getElementById("outputformdata").innerHTML = formoutput;
 }
 
-function setCookie(cname, cvalue, exdays) 
+function setCookie(name, cvalue, expiryDays) 
 {
         const d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) 
+function getCookie(name) 
 {
-  let name = cname + "=";
-  let ca = document.cookie.split(';');
+  var cookieName = name + "=";
+  var cookies = document.cookie.split(';');
  
-  for(let i = 0; i < ca.length; i++) 
+  for(let i = 0; i < cookies.length; i++) 
   {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') 
+    var cookie = cookies[i].trim();
+    if (cookie.indexOf(cookieName) == 0)
     {
-      c = c.substring(1);
+      return cookie.substring(cookieName.length, cookie.length);
     }
-    if (c.indexOf(name) == 0) 
-    {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+   return "";
 }
 
 var inputs = [
