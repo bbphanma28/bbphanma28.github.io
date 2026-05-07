@@ -566,9 +566,12 @@ function getCookie(name)
     var cookieName = name + "=";
     var cookies = document.cookie.split(';');
 
-    for (var i = 0; i < cookies.length; i++) {
+    for (var i = 0; i < cookies.length; i++) 
+    {
         var cookie = cookies[i].trim();
-        if (cookie.indexOf(cookieName) == 0) {
+     
+        if (cookie.indexOf(cookieName) == 0)
+        {
             return cookie.substring(cookieName.length, cookie.length);
         }
     }
@@ -587,20 +590,18 @@ var inputs
   {id: "zip", cookieName: "zipCode"},
   {id: "address1", cookieName: "address1"},
   {id: "username", cookieName: "username"},
-]
+];
 
 inputs.forEach(function (input) 
 {
     var inputElement = document.getElementById(input.id);
 
-    // Prefill input fields
     var cookieValue = getCookie(input.cookieName);
     if (cookieValue !== "")
     {
         inputElement.value = cookieValue;
     }
 
-    // Set a cookie when the input field changes
     inputElement.addEventListener("input", function () 
     {
         setCookie(input.cookieName, inputElement.value, 30);
@@ -611,8 +612,7 @@ var firstName = getCookie("firstName");
 if (firstName !== "") 
 {
     document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
-    document.getElementById("welcome2").innerHTML =
-        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
+    document.getElementById("welcome2").innerHTML = "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
 
     document.getElementById("new-user").addEventListener("click", function ()
     {
@@ -624,20 +624,18 @@ if (firstName !== "")
     });
 }
 
-document.getElementById("remember-me").addEventListener("change", function () 
+document.getElementById("remember-me").addEventListener("change", function() 
 {
     const rememberMe = this.checked;
 
     if (!rememberMe)
     {
-        // If "Remember Me" is unchecked, delete cookies
         deleteAllCookies();
         console.log("All cookies deleted because 'Remember Me' is unchecked.");
     } 
      
       else 
       {
-          // If "Remember Me" is checked or rechecked, save cookies
           inputs.forEach(function (input) 
           {
               const inputElement = document.getElementById(input.id);
@@ -646,7 +644,6 @@ document.getElementById("remember-me").addEventListener("change", function ()
                   setCookie(input.cookieName, inputElement.value, 30);
               }
           });
-          console.log("Cookies saved because 'Remember Me' is checked.");
        }
 });
 
