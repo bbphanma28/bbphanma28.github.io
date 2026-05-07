@@ -553,33 +553,35 @@ function reviewinfo()
     document.getElementById("outputformdata").innerHTML = formoutput;
 }
 
-function setCookie (name, cvalue, expiryDate)
+function setCookie(cname, cvalue, exdays) 
 {
-  day = new Date();
-  day.setTime(day.getTime() + (expiryDays * 48 * 60 * 60 * 1000));
-  expires = "expires=" + day.toUTCString();
-  document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(name) 
+function getCookie(cname) 
 {
-    var cookieName = name + "=";
-    var cookies = document.cookie.split(';');
-
-    for (var i = 0; i < cookies.length; i++) 
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+ 
+  for(let i = 0; i < ca.length; i++) 
+  {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') 
     {
-        var cookie = cookies[i].trim();
-     
-        if (cookie.indexOf(cookieName) == 0)
-        {
-            return cookie.substring(cookieName.length, cookie.length);
-        }
+      c = c.substring(1);
     }
-    return "";
+    if (c.indexOf(name) == 0) 
+    {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
-var inputs =
-[
+var inputs = [
   {id: "fname", cookieName: "firstName"},
   {id: "lname", cookieName: "lastName"},
   {id: "middleinit", cookieName: "middleInitial"},
