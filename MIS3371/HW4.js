@@ -556,7 +556,7 @@ function reviewinfo()
 function setCookie(name, cvalue, expiryDays) 
 {
         const d = new Date();
-        d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+        d.setTime(d.getTime() + (expiryDays * 48 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
         document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
