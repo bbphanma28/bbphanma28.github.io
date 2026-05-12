@@ -233,3 +233,9 @@ td.output {
 	background-color: white;
 	z-index: 1000;
 }
+
+#footer iframe {
+    width: 100%;
+    height: 60px;
+    border: none;
+}
