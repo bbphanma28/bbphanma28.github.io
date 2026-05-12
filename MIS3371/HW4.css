@@ -203,6 +203,8 @@ td.output {
 
 #footer {
 	position: sticky;
+	gap: 10px;
+	padding: 10px;
 	bottom: 0;
 	left: 0;
 	width: 100%;
