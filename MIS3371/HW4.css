@@ -10,7 +10,6 @@ body {
 	background-color: #F8FBF4;
 	font-family: 'Courier New', monospace;
 	color: #267835;
-	margin: 0;
 }
 
 #imglogo {
@@ -53,7 +52,6 @@ body {
 	padding: 20px; 
 	border-radius: 10px; 
 	width: 55%
-	margin-bottom: 20px;
 }
 
 table {
