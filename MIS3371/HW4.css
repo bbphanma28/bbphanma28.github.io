@@ -30,21 +30,21 @@ body {
 	text-align: right;
 }
 
-header {
-	position: sticky;
+/* header {
+
 	top: 0;
 	width: 100%;
 	background-color: #F8FBF4;
 	transition: background-color 0.4 ease-in-out;
 	z-index: 1000;
-}
+} */
 
 header.scrolled {
 	background-color: #F8FBF4;
 	opacity: 1.0;
 }
 
-#formheader {
+#formheader {	
 	display: flex;
 	justify-content: center;
 	margin: 20px auto;
@@ -223,4 +223,8 @@ td.output {
 	margin-top: 20px;
 	font-size: 20px;
 	text-align: center;
+}
+
+#footer {
+	position: sticky;
 }
