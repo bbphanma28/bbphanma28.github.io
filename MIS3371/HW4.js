@@ -553,6 +553,12 @@ function reviewinfo()
     document.getElementById("outputformdata").innerHTML = formoutput;
 }
 
+fetch("states.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("state").innerHTML = data;
+  });
+
 function setCookie(name, cvalue, expiryDays) 
 {
         let d = new Date();
