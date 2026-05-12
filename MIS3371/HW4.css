@@ -30,20 +30,6 @@ body {
 	text-align: right;
 }
 
-/* header {
-
-	top: 0;
-	width: 100%;
-	background-color: #F8FBF4;
-	transition: background-color 0.4 ease-in-out;
-	z-index: 1000;
-} */
-
-header.scrolled {
-	background-color: #F8FBF4;
-	opacity: 1.0;
-}
-
 #formheader {	
 	display: flex;
 	justify-content: center;
@@ -156,16 +142,6 @@ input[type="range"] {
 	text-align: center;
 }
 
-#footer {
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
-	background-color: #1499BD;
-	color: #E1FEF4;
-	gap: 10px;
-	padding: 10px;
-}
-
 button {
 	width: 5%;
 	height: 10%;
@@ -230,7 +206,7 @@ td.output {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: white;
+	background-color: #1499BD;
 	z-index: 1000;
 }
 
