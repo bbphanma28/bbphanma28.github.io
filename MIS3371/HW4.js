@@ -554,10 +554,8 @@ function reviewinfo()
 }
 
 fetch("states.html")
-  .then(response => response.text())
-  .then(data => {
-      document.getElementById("state").innerHTML = data;
-  });
+  .then(option => option.text())
+  .then(data => { document.getElementById("state").innerHTML = data; });
 
 function setCookie(name, cvalue, expiryDays) 
 {
@@ -583,7 +581,7 @@ function getCookie(name)
    return "";
 }
 
-let inputs = [
+var inputs = [
   {id: "fname", cookieName: "firstName"},
   {id: "lname", cookieName: "lastName"},
   {id: "middleinit", cookieName: "middleInitial"},
