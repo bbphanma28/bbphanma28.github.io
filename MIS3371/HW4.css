@@ -53,6 +53,7 @@ body {
 	padding: 20px; 
 	border-radius: 10px; 
 	width: 55%
+	margin-bottom: 20px;
 }
 
 table {
@@ -204,7 +205,7 @@ td.output {
 
 #footer {
 	margin-top: 20px;
-	background-color: #93935C;
+	background-color: #1499BD;
 	padding: 10px;
 	position: sticky;
 	bottom: 0;
@@ -212,6 +213,7 @@ td.output {
 	box-sizing: border-box;
 	z-index: 1000;
 	margin: 0 auto;
+	border-radius: 10px;
 }
 
 #footer iframe {
