@@ -555,7 +555,7 @@ function reviewinfo()
 
 function setCookie(name, cvalue, expiryDays) 
 {
-        const d = new Date();
+        let d = new Date();
         d.setTime(d.getTime() + (expiryDays * 48 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
         document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
@@ -577,7 +577,7 @@ function getCookie(name)
    return "";
 }
 
-var inputs = [
+let inputs = [
   {id: "fname", cookieName: "firstName"},
   {id: "lname", cookieName: "lastName"},
   {id: "middleinit", cookieName: "middleInitial"},
@@ -592,9 +592,9 @@ var inputs = [
 
 inputs.forEach(function (input) 
 {
-    var inputElement = document.getElementById(input.id);
+    let inputElement = document.getElementById(input.id);
 
-    var cookieValue = getCookie(input.cookieName);
+    let cookieValue = getCookie(input.cookieName);
     if (cookieValue !== "")
     {
         inputElement.value = cookieValue;
@@ -606,7 +606,7 @@ inputs.forEach(function (input)
     });
 });
 
-var firstName = getCookie("firstName");
+let firstName = getCookie("firstName");
 if (firstName !== "") 
 {
     document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
@@ -624,19 +624,18 @@ if (firstName !== "")
 
 document.getElementById("remember-me").addEventListener("change", function() 
 {
-    const rememberMe = this.checked;
+    rememberMe = this.checked;
 
     if (!rememberMe)
     {
         deleteAllCookies();
-        console.log("All cookies deleted because 'Remember Me' is unchecked.");
     } 
      
       else 
       {
           inputs.forEach(function (input) 
           {
-              const inputElement = document.getElementById(input.id);
+              inputElement = document.getElementById(input.id);
               if (inputElement.value.trim() !== "")
               {
                   setCookie(input.cookieName, inputElement.value, 30);
