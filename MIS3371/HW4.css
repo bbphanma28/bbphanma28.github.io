@@ -207,6 +207,7 @@ td.output {
 	background-color: #1499BD;
 	padding: 10px;
 	position: sticky;
+	align-items: center;
 	bottom: 0;
 	width: 100%;
 	box-sizing: border-box;
