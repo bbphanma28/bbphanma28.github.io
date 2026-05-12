@@ -202,11 +202,14 @@ td.output {
 }
 
 #footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	background-color: #1499BD;
+	color: #E1FEF4;
 	position: sticky;
 	gap: 10px;
 	padding: 10px;
-	bottom: 0;
-	left: 0;
 	width: 100%;
 	z-index: 1000;
 }
